@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
+:root {
   scroll-behavior: smooth;
 }
 body {
@@ -29,7 +29,7 @@ body {
   height: 100%;
   width: 100%;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: center;
   padding-top: 3.5rem;
 }
@@ -107,6 +107,7 @@ main {
 .social_media {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 .social_icon {
@@ -198,4 +199,24 @@ strong {
 .contact_form button:active {
   transform: translateY(0);
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: .8em;
+  }
+  .subheading {
+    margin-bottom: .5em;
+  }
+  .school_flex {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .aside {
+    display: none;
+  }
+  main {
+    margin-left: 0;
+    padding: 1rem;
+  }
 }
