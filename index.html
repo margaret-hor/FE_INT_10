@@ -4,24 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main page</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>I like dogs</h1>
-  <h1>I like cats!</h1>
-  <p>HOMEWORKS:</p>
-  <ul>
-    <li>
-      <a href="Lesson_1/index.html">Lesson_1</a>
-    </li>
-    <li>
-      <a href="Lesson_2/index.html">Lesson_2</a>
-    </li>
-    <li>
-      <a href="Lesson_3/index.html">Lesson_3</a>
-    </li>
-    <li>
-      <a href="Lesson_4/index.html">Lesson_4</a>
-    </li>
-  </ul>
+  <div class="page_wrapper">
+    <header>
+      <nav class="topnav">
+        <ul class="nav_list">
+          <li>
+            <a href="#homeworks">Homeworks</a>
+          </li>
+          <li>
+            <a href="#practices">Lesson practices</a>
+          </li>
+        </ul>
+      </nav>
+      <h1>HOME PAGE</h1>
+    </header>
+    <main class="main">
+      <section class="section" id="homeworks">
+        <h2>HOMEWORKS:</h2>
+        <ul>
+          <li>
+            <a href="Lesson_3/index.html">Lesson_3</a>
+          </li>
+        </ul>
+      </section>
+      <section class="section" id="practices">
+        <h2>PRACTICE MADE DURING LESSONS</h2>
+        <ul>
+          <li>
+            <a href="Lesson_1/index.html">Lesson_1</a>
+          </li>
+          <li>
+            <a href="Lesson_2/index.html">Lesson_2</a>
+          </li>
+          <li>
+            <a href="Lesson_4/index.html">Lesson_4</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
