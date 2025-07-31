@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background-color: #edfdff;
+  color: white;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+}
+.page_wrapper {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.main_wrapper {
+  width: 100%;
+  max-width: 1440px;
+  aspect-ratio: 1440 / 900;
+  background-color: #3399CC;
+  border: 25px solid #2B81AC;
+  margin: 3em auto;
+  padding: 35px 135px 95px;
+}
+.main_header {
+  display: flex;
+  gap: 5px;
+}
+h1 {
+  font-size: 21px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.forecast_wrapper {
+  background-color: white;
+  font-size: 0;
+  width: 100%;
+  max-width: 1170px;
+  aspect-ratio: 1170 / 592;
+  margin: 35px auto 35px;
+  border: 2px solid #fff;
+}
+.item {
+  opacity: 70%;
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  border: 2px solid #fff;
+  padding: 26px 0 27px;
+  text-align: center;
+  width: 25%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-100 {
+  width: 100%;
+}
+.city_name {
+  margin-bottom: 4px;
+}
+.degs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  opacity: 70%;
+}
+.item img {
+  height: 61px;
+}
+
+.item:has(img.cursor_icon) {
+  opacity: 100%;
+}
+/* ?will :has affect performance? */
+.lisbon {
+  background-color: #3399CC;
+}
+.paris {
+  background-color: #33CCCC;
+}
+.belgrade {
+  background-color: #996699;
+}
+.venice {
+  background-color: #C24747;
+}
+.tel-avive {
+  background-color: #E2674A;
+}
+.cairo {
+  background-color: #FFCC66;
+}
+.new-york {
+  background-color: #99CC99;
+}
+.new-delhi {
+  background-color: #669999;
+}
+.san-francisco {
+  background-color: #CC6699;
+}
+.tokyo {
+  background-color: #339966;
+}
+.sydney {
+  background-color: #666699;
+}
+.cursor_icon {
+  position: absolute;
+  bottom: 15%;
+  right: 7%;
+  max-width: 30px;
+  max-height: 35px;
+  transform: rotate(-40deg);
+}
