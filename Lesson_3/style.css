@@ -14,6 +14,11 @@ body {
   color: #2c2c2c;
   line-height: 1.6;
 }
+::selection {
+  color: white;
+  background-color: #E27D9D;
+}
+
 .aside {
   background-color: #E27D9D;
   color: #fff;
@@ -67,6 +72,7 @@ body {
   color: #F9F9F9;
   border: 3px solid #fff;
 }
+
 main {
   margin-left: clamp(200px, 20vw, 300px);
   padding: 3rem;
