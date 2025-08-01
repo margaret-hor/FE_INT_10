@@ -54,6 +54,24 @@ h1 {
   padding: 26px 0 27px;
   text-align: center;
   width: 25%;
+  cursor: pointer;
+}
+.item:hover {
+  opacity: 100%;
+}
+.item::after {
+  content: "";
+  position: absolute;
+  bottom: 15%;
+  right: 7%;
+  width: 30px;
+  height: 35px;
+  transform: rotate(-40deg);
+  background: url("./icons/cursor.png") no-repeat center/contain;
+  opacity: 0;
+}
+.item:active::after {
+  opacity: 1;
 }
 .w-50 {
   width: 50%;
@@ -74,11 +92,6 @@ h1 {
 .item img {
   height: 61px;
 }
-
-.item:has(img.cursor_icon) {
-  opacity: 100%;
-}
-/* ?will :has affect performance? */
 .lisbon {
   background-color: #3399CC;
 }
@@ -111,12 +124,4 @@ h1 {
 }
 .sydney {
   background-color: #666699;
-}
-.cursor_icon {
-  position: absolute;
-  bottom: 15%;
-  right: 7%;
-  max-width: 30px;
-  max-height: 35px;
-  transform: rotate(-40deg);
 }
