@@ -11,6 +11,7 @@ body {
   color: white;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1rem;
+  scroll-behavior: smooth;
 }
 .page_wrapper {
   margin: 0 auto;
@@ -69,6 +70,7 @@ h1 {
   transform: rotate(-40deg);
   background: url("./icons/cursor.png") no-repeat center/contain;
   opacity: 0;
+  transition: opacity .15s;
 }
 .item:active::after {
   opacity: 1;
