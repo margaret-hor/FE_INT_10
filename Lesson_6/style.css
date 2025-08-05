@@ -4,3 +4,11 @@ body {
   background-color: #3b3b3b;
   color: #fff;
 }
+.hw {
+  background-color: #fff;
+  padding: 2.5rem;
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 2rem;
+}
