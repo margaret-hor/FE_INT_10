@@ -21,7 +21,6 @@ body {
 .main_wrapper {
   width: 100%;
   max-width: 1440px;
-  aspect-ratio: 1440 / 900;
   background-color: #3399CC;
   border: 25px solid #2B81AC;
   margin: 3em auto;
@@ -42,38 +41,17 @@ h1 {
   font-size: 0;
   width: 100%;
   max-width: 1170px;
-  aspect-ratio: 1170 / 592;
   margin: 35px auto 35px;
   border: 2px solid #fff;
 }
 .item {
-  opacity: 70%;
-  position: relative;
   display: inline-block;
   font-size: 22px;
   border: 2px solid #fff;
   padding: 26px 0 27px;
   text-align: center;
   width: 25%;
-  cursor: pointer;
-}
-.item:hover {
-  opacity: 100%;
-}
-.item::after {
-  content: "";
-  position: absolute;
-  bottom: 15%;
-  right: 7%;
-  width: 30px;
-  height: 35px;
-  transform: rotate(-40deg);
-  background: url("./icons/cursor.png") no-repeat center/contain;
-  opacity: 0;
-  transition: opacity .15s;
-}
-.item:active::after {
-  opacity: 1;
+  cursor: url(./icons/cursor.cur), pointer;
 }
 .w-50 {
   width: 50%;
@@ -89,41 +67,75 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  opacity: 70%;
+  color: rgba(255, 255, 255, .7);
 }
 .item img {
   height: 61px;
 }
-.lisbon {
-  background-color: #3399CC;
+
+.item:nth-child(1n) {
+  background-color: rgba(51, 153, 204, 0.7);
 }
-.paris {
-  background-color: #33CCCC;
+.item:nth-child(1):hover {
+  background-color: rgba(51, 153, 204, 1);
 }
-.belgrade {
-  background-color: #996699;
+.item:nth-child(2n) {
+  background-color: rgba(51, 204, 204, 0.7);
 }
-.venice {
-  background-color: #C24747;
+.item:nth-child(2n):hover {
+  background-color: rgba(51, 204, 204, 1);
 }
-.tel-avive {
-  background-color: #E2674A;
+.item:nth-child(3n) {
+  background-color: rgba(153, 102, 153, 0.7);
 }
-.cairo {
-  background-color: #FFCC66;
+.item:nth-child(3):hover {
+  background-color: rgba(153, 102, 153, 1);
 }
-.new-york {
-  background-color: #99CC99;
+.item:nth-child(4n) {
+  background-color: rgba(194, 71, 71, 0.7);
 }
-.new-delhi {
-  background-color: #669999;
+.item:nth-child(4n):hover {
+  background-color: rgba(194, 71, 71, 1);
 }
-.san-francisco {
-  background-color: #CC6699;
+.item:nth-child(5n) {
+  background-color: rgba(226, 103, 74, 0.7);
 }
-.tokyo {
-  background-color: #339966;
+.item:nth-child(5n):hover {
+  background-color: rgba(226, 103, 74, 1);
 }
-.sydney {
-  background-color: #666699;
+.item:nth-child(6n) {
+  background-color: rgba(255, 204, 102, 0.7);
+}
+.item:nth-child(6n):hover {
+  background-color: rgba(255, 204, 102, 1);
+}
+.item:nth-child(7n) {
+  background-color: rgba(153, 204, 153, 0.7);
+}
+.item:nth-child(7n):hover {
+  background-color: rgba(153, 204, 153, 1);
+}
+.item:nth-child(8n) {
+  background-color: rgba(102, 153, 153, 0.7);
+}
+.item:nth-child(8n):hover {
+  background-color: rgba(102, 153, 153, 1);
+}
+.item:nth-child(9n) {
+  background-color: rgba(204, 102, 153, 0.7);
+}
+.item:nth-child(9n):hover {
+  background-color: rgba(204, 102, 153, 1);
+}
+.item:nth-child(10n) {
+  background-color: rgba(51, 153, 102, 0.7);
+}
+.item:nth-child(10n):hover {
+  background-color: rgba(51, 153, 102, 1);
+}
+.item:nth-child(11n) {
+  background-color: rgba(102, 102, 153, 0.7);
+}
+.item:nth-child(11n):hover {
+  background-color: rgba(102, 102, 153, 1);
 }
