@@ -436,4 +436,11 @@ main {
   .section {
     margin-bottom: 90px;
   }
+
+  .section .row {
+    justify-content: center;
+  }
+  .section_content {
+    max-width: 90%;
+  }
 }
