@@ -30,7 +30,7 @@ a {
   max-width: 1126px;
   margin: 0 auto;
 }
-.row {
+.flex_row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,7 +95,7 @@ main {
   border-color: var(--light-blue);
 }
 
-.header_actions > button {
+.header_btn {
   padding: 11px 25px;
 }
 
@@ -142,15 +142,15 @@ main {
   gap: 30px;
   align-items: center;
 }
-.hero_video {
+.hero_video_link {
   display: flex;
   gap: 9px;
   align-items: center;
 }
-.hero_video_icon {
+.hero_play_icon {
   width: 20px;
 }
-.hero_video_text {
+.hero_v-link_text {
   font-size: 16px;
   font-weight: 600;
   color: var(--accent-color);
@@ -158,7 +158,7 @@ main {
   text-decoration-thickness: 1px;
   text-underline-offset: 1.5px;
 }
-.hero_actions > .button {
+.hero_btn {
   padding: 15px 40px;
 }
 
@@ -172,12 +172,6 @@ main {
   margin-bottom: 120px;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .section_heading {
   font-size: 36px;
   font-weight: 600;
@@ -188,7 +182,7 @@ main {
 .feature_heading {
   max-width: 540px;
   text-align: center;
-  margin-bottom: 55px;
+  margin: 0 auto 55px;
 }
 .features_container {
   display: flex;
@@ -218,12 +212,16 @@ main {
   line-height: 26px;
 }
 
-.feature_button {
+.feature_actions {
+  display: flex;
+  justify-content: center;
+}
+.feature_btn {
   padding: 15px 33px;
   text-transform: uppercase;
 }
 
-.section {
+.main_sections {
   margin-bottom: 105px;
 }
 
@@ -348,7 +346,7 @@ main {
   .hero_actions > .button {
     padding: 10px 20px;
   }
-  .hero_video_text {
+  .hero_v-link_text {
     font-size: 14px;
   }
 
@@ -396,7 +394,7 @@ main {
     display: none;
   }
 
-  .hero_section .row {
+  .hero_section .flex_row {
     justify-content: center;
   }
   .hero_img {
@@ -420,7 +418,6 @@ main {
     margin-bottom: 45px;
   }
   .feature_icon {
-    width: 100%;
     max-width: 40px;
     margin-bottom: 20px;
   }
@@ -433,11 +430,11 @@ main {
     margin-bottom: 40px;
   }
 
-  .section {
+  .main_sections {
     margin-bottom: 90px;
   }
 
-  .section .row {
+  .main_sections .flex_row {
     justify-content: center;
   }
   .section_content {

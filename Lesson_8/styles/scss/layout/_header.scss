@@ -1,0 +1,64 @@
+@use '../abstracts/index' as a;
+
+.header {
+  padding: 35px 0 17px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: a.$bgc;
+  z-index: 1000;
+}
+.logo_link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 187px;
+}
+.nav_container {
+  display: flex;
+  gap: 50px;
+}
+.nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.nav_link {
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 2;
+}
+.header_actions {
+  display: flex;
+  gap: 15px;
+}
+
+@include a.bp-devices (s-laptop) {
+  .logo_text {
+    display: none;
+  }
+}
+@include a.bp-devices(tablet) {
+  .header {
+    padding: 20px 0 15px;
+  }
+  .logo_link {
+    max-width: 50px;
+  }
+}
+@include a.bp-devices(mobile) {
+  .header_actions {
+    display: none;
+  }
+}
+@include a.bp-devices(m-mobile) {
+  .logo_link {
+    display: none;
+  }
+  .nav_container, .nav {
+    width: 100%;
+  }
+  .nav {
+    justify-content: space-evenly;
+  }
+}

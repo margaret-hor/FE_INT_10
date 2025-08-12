@@ -1,0 +1,58 @@
+@use '../abstracts/index' as a;
+
+.button {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  background-color: a.$accent-color;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 4px;
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all .3s ease;
+
+  &:hover {
+    background-color: transparent;
+    color: #173A56;
+    border-color: a.$light-blue;
+  }
+  &.transparent {
+    background-color: transparent;
+    color: #173A56;
+    border: 1px solid a.$light-blue;
+
+    &:hover {
+      background-color: a.$accent-color;
+      color: #fff;
+      border-color: transparent;
+    }
+  }
+}
+
+.header_btn {
+  padding: 11px 25px;
+}
+.hero_btn {
+  padding: 15px 40px;
+}
+.feature_btn {
+  padding: 15px 33px;
+  text-transform: uppercase;
+}
+.footer_btn {
+  padding: 8px 15px;
+}
+
+@include a.bp-devices(tablet) {
+  .button {
+    font-size: 14px;
+  }
+  .header_btn {
+    padding: 8px 18px;
+  }
+  .hero_btn {
+     padding: 10px 20px;
+  }
+}

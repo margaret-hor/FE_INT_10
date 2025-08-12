@@ -1,0 +1,23 @@
+@use '../abstracts/index' as a;
+
+.container {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+}
+
+@include a.bp-devices(s-laptop) {
+  .container {
+    max-width: 900px;
+  }
+}
+@include a.bp-devices(tablet) {
+  .container {
+    max-width: 680px;
+  }
+}
+@include a.bp-devices(mobile) {
+  .container {
+    max-width: 400px;
+  }
+}

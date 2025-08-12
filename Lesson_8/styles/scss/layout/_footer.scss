@@ -1,0 +1,43 @@
+@use '../abstracts/index' as a;
+
+.footer {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  border-top: 1px solid a.$light-blue;
+}
+.footer_main_flex {
+  display: flex;
+  align-items: flex-end;
+  gap: 140px;
+
+  & .logo_link {
+    align-self: flex-start;
+  }
+}
+
+.footer_actions {
+  display: flex;
+  gap: 130px;
+  padding-top: 65px;
+}
+.footer_links {
+  display: flex;
+  flex-direction: column;
+}
+.quick_links {
+  width: 118px;
+}
+.legal {
+  width: 135px;
+}
+
+.input_footer {
+  width: 325px;
+  padding: 15px 18px;
+  font-size: 16px;
+  border: 1px solid a.$light-blue;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,58 @@
+@use '../abstracts/index' as a;
+
+.main_sections {
+  margin-bottom: 105px;
+
+  &:last-child {
+    margin-bottom: 145px;
+  }
+}
+
+.section_content {
+  max-width: 486px;
+}
+.content_intro {
+  margin-bottom: 30px;
+}
+.content_info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  &.info_list {
+    gap: 30px;
+  }
+}
+.section_img {
+  width: 100%;
+  max-width: 520px;
+}
+
+@include a.bp-devices(s-laptop) {
+  .section_content {
+    max-width: 420px;
+  }
+  .section_img {
+    max-width: 440px;
+  }
+}
+@include a.bp-devices(tablet) {
+  .main_sections {
+    margin-bottom: 90px;
+    & .flex_row {
+      display: block;
+    }
+  }
+  .section_content {
+    max-width: 100%;
+  }
+  .section_img {
+    display: none;
+  }
+}
+@include a.bp-devices(mobile) {
+  .section_content {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}
