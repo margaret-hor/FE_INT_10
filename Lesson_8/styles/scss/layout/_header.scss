@@ -33,26 +33,24 @@
   gap: 15px;
 }
 
-@include a.bp-devices (s-laptop) {
-  .logo_text {
-    display: none;
-  }
-}
 @include a.bp-devices(tablet) {
   .header {
     padding: 20px 0 15px;
   }
-  .logo_link {
+  .header_logo {
     max-width: 50px;
   }
 }
 @include a.bp-devices(mobile) {
+  .header_logo_text {
+    display: none;
+  }
   .header_actions {
     display: none;
   }
 }
 @include a.bp-devices(m-mobile) {
-  .logo_link {
+  .header_logo {
     display: none;
   }
   .nav_container, .nav {

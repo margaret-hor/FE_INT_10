@@ -124,11 +124,11 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: capitalize;
 }
 
-.links_abbr {
+.abbr {
   text-transform: uppercase;
 }
 
-.links_mix_text {
+.mix_case {
   text-transform: none;
 }
 
@@ -246,27 +246,26 @@ h1, h2, h3, h4, h5, h6 {
   gap: 15px;
 }
 
-@media screen and (max-width: 1024px) {
-  .logo_text {
-    display: none;
-  }
-}
 @media screen and (max-width: 768px) {
   .header {
     padding: 20px 0 15px;
   }
 
-  .logo_link {
+  .header_logo {
     max-width: 50px;
   }
 }
 @media screen and (max-width: 425px) {
+  .header_logo_text {
+    display: none;
+  }
+
   .header_actions {
     display: none;
   }
 }
 @media screen and (max-width: 375px) {
-  .logo_link {
+  .header_logo {
     display: none;
   }
 
@@ -339,50 +338,43 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .footer {
-  max-width: 1110px;
-  margin: 0 auto;
-  padding-top: 100px;
-  padding-bottom: 80px;
+  padding: 100px 15px 80px;
   border-top: 1px solid #BCD0E5;
 }
 
-.footer_main_flex {
-  display: flex;
-  align-items: flex-end;
-  gap: 140px;
-}
-.footer_main_flex .logo_link {
-  align-self: flex-start;
-}
-
-.footer_actions {
-  display: flex;
-  gap: 130px;
-  padding-top: 65px;
-}
-
-.footer_links {
-  display: flex;
-  flex-direction: column;
-}
-
-.quick_links {
-  width: 118px;
-}
-
-.legal {
-  width: 135px;
-}
-
-.input_footer {
-  width: 325px;
-  padding: 15px 18px;
-  font-size: 16px;
-  border: 1px solid #BCD0E5;
-  border-radius: 4px;
+.footer_logo {
   margin-bottom: 20px;
 }
 
+.footer_content {
+  width: 75%;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.footer_links_wrapper {
+  width: 40%;
+}
+
+.footer_forms_wrapper {
+  width: 35%;
+}
+
+@media screen and (max-width: 768px) {
+  .footer_content {
+    width: 100%;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .footer_links_wrapper, .footer_forms_wrapper {
+    width: 100%;
+  }
+
+  .footer_links_wrapper {
+    justify-content: space-evenly;
+  }
+}
 .button {
   font-size: 16px;
   font-weight: 600;
@@ -458,6 +450,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .tick_icon {
   max-width: 16px;
+}
+
+.input_footer {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #BCD0E5;
+  border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 .hero_section {

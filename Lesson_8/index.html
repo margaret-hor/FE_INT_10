@@ -18,9 +18,9 @@
     <header class="header">
       <div class="container flex_row">
 
-        <a href="#" class="logo_link">
+        <a href="#" class="logo_link header_logo">
           <img src="assets/img/logo_icon.svg" alt="">
-          <img src="assets/img/logo_text.svg" class="logo_text" alt="">
+          <img src="assets/img/logo_text.svg" class="header_logo_text" alt="">
         </a>
 
         <div class="nav_container">
@@ -217,34 +217,36 @@
 
     </main>
 
-          <footer class="footer">
-        <div class="footer_main_flex">
+    <footer class="footer container">
+        <div class="logo_wrapper footer_logo">
           <a href="#" class="logo_link">
             <img src="assets/img/logo_icon.svg" alt="">
             <img src="assets/img/logo_text.svg" class="logo_text" alt="">
           </a>
-          <div class="footer_actions">
-            <div class="footer_links quick_links">
-              <a href="#">about</a>
-              <a href="#">blog</a>
-              <a href="#">contact</a>
-              <a href="#" class="links_abbr">faq</a>
-            </div>
-            <div class="footer_links legal">
-              <a href="#">disclaimer</a>
-              <a href="#">financing</a>
-              <a href="#">privacy policy</a>
-              <a href="#" class="links_mix_text">Terms of Service</a>
-            </div>
-            <div class="footer_form">
-              <form action="#">
-                <input type="tel" name="tel" class="input_footer">
-                <button class="button footer_btn">sign up now</button>
-              </form>
-            </div>
+        </div>
+        <div class="footer_content flex_row">
+          <div class="footer_links_wrapper flex_row">
+            <ul class="footer_links footer_nav_links">
+              <li><a href="#">about</a></li>
+              <li><a href="#">blog</a></li>
+              <li><a href="#">contact</a></li>
+              <li><a href="#" class="abbr">faq</a></li>
+            </ul>
+            <ul class="footer_links footer_legal">
+              <li><a href="#">disclaimer</a></li>
+              <li><a href="#">financing</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#" class="mix_case">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer_forms_wrapper">
+            <form action="#" class="footer_form">
+              <input type="tel" name="tel" class="input_footer" placeholder="Enter your phone number">
+              <button type="submit" class="button footer_btn">sign up now</button>
+            </form>
           </div>
         </div>
-      </footer>
+    </footer>
   </div>
 </body>
 
