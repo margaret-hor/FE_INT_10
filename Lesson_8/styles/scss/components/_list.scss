@@ -7,11 +7,15 @@
   max-width: 440px;
 }
 .tick_icon_container {
-  max-width: 35px;
-  padding: 12px 10px;
+  max-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px;
   border-radius: 14px;
   background-color: a.$accent-color;
 }
 .tick_icon {
-  max-width: 16px;
+  font-size: 1.1em;
+  color: #fff;
 }

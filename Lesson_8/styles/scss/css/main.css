@@ -442,14 +442,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tick_icon_container {
-  max-width: 35px;
-  padding: 12px 10px;
+  max-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px;
   border-radius: 14px;
   background-color: #FF9900;
 }
 
 .tick_icon {
-  max-width: 16px;
+  font-size: 1.1em;
+  color: #fff;
 }
 
 .input_footer {
@@ -487,7 +491,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero_play_icon {
-  width: 20px;
+  font-size: 1.3em;
+  color: #FF9900;
 }
 
 .hero_img {
@@ -574,11 +579,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30px;
   padding: 16px 19px;
   border-radius: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .feature_icon {
-  height: 18px;
-  margin: 0 auto;
+  color: #fff;
+  font-size: 1.1em;
 }
 
 .feature_actions {

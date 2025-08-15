@@ -37,10 +37,13 @@
   margin-bottom: 30px;
   padding: 16px 19px;
   border-radius: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .feature_icon {
-  height: 18px;
-  margin: 0 auto;
+  color: #fff;
+  font-size: 1.1em;
 }
 
 .feature_actions {
