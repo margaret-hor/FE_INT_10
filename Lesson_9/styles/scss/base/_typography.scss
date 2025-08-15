@@ -1,0 +1,69 @@
+@use '../abstracts/index' as a;
+
+h1, h2, h3, h4 {
+  color: a.$title-sub-color;
+}
+.nav-link {
+  color: a.$title-sub-color;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .3s ease;
+}
+.header__nav-link {
+  font-size: 20px;
+}
+.footer__nav-link {
+  font-size: 18px;
+}
+
+.section__title {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.section__subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center; 
+  line-height: 24px;
+}
+
+.team__card-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: a.$abt-card-name-text;
+}
+.team__card-position {
+  font-size: 18px;
+  font-weight: 300;
+  color: a.$abt-card-position-text;
+}
+
+@include a.bp-devices(tablet) {
+  .header__nav-link {
+    font-size: 16px;
+  }
+  .team__card-name {
+    font-size: 16px;
+  }
+  .team__card-position {
+    font-size: 16px;
+  }
+}
+@include a.bp-devices(mobile) {
+  .header__nav-link {
+    font-size: 14px;
+  }
+  .section__title {
+    font-size: 28px;
+  }
+  .section__subtitle {
+    font-size: 14px;
+  }
+}
+@include a.bp-devices(m-mobile) {
+  .footer__nav-link {
+    font-size: 16px;
+  }
+}

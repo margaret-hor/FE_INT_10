@@ -1,0 +1,28 @@
+@use '../abstracts/index' as a;
+
+.logo {
+  display: flex;
+}
+.header__logo-icon, .footer__logo-icon {
+  max-width: 62px;
+}
+.header__logo-text, .footer__logo-text {
+  width: 102px;
+}
+
+@include a.bp-devices(tablet) {
+  .header__logo-icon {
+    max-width: 50px;
+  }
+  .header__logo-text {
+    width: 90px;
+  }
+}
+@include a.bp-devices(mobile) {
+  .header__logo-text--hidden {
+    display: none;
+  }
+  .header__logo-icon {
+    max-width: 35px;
+  }
+}

@@ -1,0 +1,33 @@
+@use '../abstracts/index' as a;
+
+.social-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-btn--dark {
+  background-color: a.$accent-color-light;
+
+  transition: all .3s ease;
+}
+.social-btn--light {
+  background-color: a.$accent-bgc;
+  border: 1px solid a.$accent-color;
+
+  transition: all .3s ease;
+}
+.social-icon {
+  font-size: 1.2rem;
+}
+.social-icon--dark {
+  color: a.$accent-color;
+
+  transition: all .3s ease;
+}
+.social-icon--light {
+  color: a.$accent-bgc;
+
+  transition: all .3s ease;
+}

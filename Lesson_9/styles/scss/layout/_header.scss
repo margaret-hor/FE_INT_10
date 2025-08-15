@@ -1,0 +1,25 @@
+@use '../abstracts/index' as a;
+
+.header {
+  width: 100%;
+  background-color: a.$accent-bgc;
+  padding: 10px 0;
+  border-bottom: 1px solid a.$divider-dark;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.header__nav {
+  display: flex;
+  gap: 30px;
+}
+.header__actions {
+  display: flex;
+  gap: 10px;
+}
+
+@include a.bp-devices(mobile) {
+  .header__nav {
+    gap: 20px;
+  }
+}

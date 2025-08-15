@@ -1,0 +1,29 @@
+@use '../abstracts/index' as a;
+
+.nav-link:hover {
+  color: a.$accent-color;
+}
+.button:hover {
+  border: 1px solid a.$accent-color;
+  background-color: a.$accent-color;
+  color: #fff;
+}
+
+.team__card-picture:hover .team__card-overlay {
+  display: flex;
+}
+
+.social-btn--dark:hover {
+  background-color: a.$accent-bgc;
+
+  & .social-icon--light {
+  color: a.$accent-color;
+  }
+}
+.social-btn--light:hover {
+  background-color: a.$accent-color;
+
+  & .social-icon--dark {
+    color: a.$accent-bgc;
+  }
+}

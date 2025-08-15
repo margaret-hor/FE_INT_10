@@ -1,0 +1,83 @@
+@use '../abstracts/index' as a;
+
+.about {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+.about__intro {
+  width: 50%;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.about__title {
+  margin-bottom: 20px;
+}
+.about__divider {
+  max-width: 45px;
+  border: 2px solid a.$divider-light;
+  margin: 0 auto 40px;
+}
+
+.team__list {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.team__card-picture {
+  position: relative;
+  max-width: 270px;
+  aspect-ratio: 1/1;
+  margin-bottom: 20px;
+}
+.team__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team__card-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: a.$accent-color;
+}
+.team__social {
+  display: flex;
+  gap: 4px;
+}
+
+@include a.bp-devices(tablet) {
+  .team__list {
+    gap: 20px;
+  }
+}
+@include a.bp-devices(mobile) {
+  .about {
+    padding-top: 100px;
+    padding-bottom: 110px;
+  }
+  .about__intro {
+    width: 80%;
+    margin: 0 auto 40px;
+  }
+  .about__divider {
+    margin: 0 auto 30px;
+  }
+  .team__list {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .team__card {
+    width: 47%;
+  }
+}
+@include a.bp-devices(m-mobile) {
+  .about {
+    padding-top: 80px;
+  }
+}

@@ -1,0 +1,414 @@
+body {
+  background-color: #F6F6F6;
+  color: #404040;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+main {
+  margin-top: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+}
+
+img, picture, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+  outline: none;
+  border: none;
+}
+
+h1, h2, h3, h4 {
+  color: #3C3C3C;
+}
+
+.nav-link {
+  color: #3C3C3C;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.header__nav-link {
+  font-size: 20px;
+}
+
+.footer__nav-link {
+  font-size: 18px;
+}
+
+.section__title {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.section__subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 24px;
+}
+
+.team__card-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #282528;
+}
+
+.team__card-position {
+  font-size: 18px;
+  font-weight: 300;
+  color: #646464;
+}
+
+@media screen and (max-width: 768px) {
+  .header__nav-link {
+    font-size: 16px;
+  }
+
+  .team__card-name {
+    font-size: 16px;
+  }
+
+  .team__card-position {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header__nav-link {
+    font-size: 14px;
+  }
+
+  .section__title {
+    font-size: 28px;
+  }
+
+  .section__subtitle {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .footer__nav-link {
+    font-size: 16px;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 82%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+}
+.u-flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #BDBDBD;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.header__nav {
+  display: flex;
+  gap: 30px;
+}
+
+.header__actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 425px) {
+  .header__nav {
+    gap: 20px;
+  }
+}
+.main_sections {
+  margin-bottom: 100px;
+}
+.main_sections:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer__social {
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 375px) {
+  .footer__nav {
+    gap: 20px;
+  }
+}
+.button {
+  color: #3C3C3C;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid #3C3C3C;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header__btn {
+  padding: 10px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    font-size: 14px;
+  }
+
+  .header__btn {
+    padding: 8px 18px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header__btn {
+    display: none;
+  }
+}
+.logo {
+  display: flex;
+}
+
+.header__logo-icon, .footer__logo-icon {
+  max-width: 62px;
+}
+
+.header__logo-text, .footer__logo-text {
+  width: 102px;
+}
+
+@media screen and (max-width: 768px) {
+  .header__logo-icon {
+    max-width: 50px;
+  }
+
+  .header__logo-text {
+    width: 90px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header__logo-text--hidden {
+    display: none;
+  }
+
+  .header__logo-icon {
+    max-width: 35px;
+  }
+}
+.social-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn--dark {
+  background-color: #5DCBE6;
+  transition: all 0.3s ease;
+}
+
+.social-btn--light {
+  background-color: #fff;
+  border: 1px solid #18B5DC;
+  transition: all 0.3s ease;
+}
+
+.social-icon {
+  font-size: 1.2rem;
+}
+
+.social-icon--dark {
+  color: #18B5DC;
+  transition: all 0.3s ease;
+}
+
+.social-icon--light {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.about {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.about__intro {
+  width: 50%;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.about__title {
+  margin-bottom: 20px;
+}
+
+.about__divider {
+  max-width: 45px;
+  border: 2px solid #DDDBDB;
+  margin: 0 auto 40px;
+}
+
+.team__list {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.team__card-picture {
+  position: relative;
+  max-width: 270px;
+  aspect-ratio: 1/1;
+  margin-bottom: 20px;
+}
+
+.team__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team__card-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #18B5DC;
+}
+
+.team__social {
+  display: flex;
+  gap: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .team__list {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .about {
+    padding-top: 100px;
+    padding-bottom: 110px;
+  }
+
+  .about__intro {
+    width: 80%;
+    margin: 0 auto 40px;
+  }
+
+  .about__divider {
+    margin: 0 auto 30px;
+  }
+
+  .team__list {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .team__card {
+    width: 47%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .about {
+    padding-top: 80px;
+  }
+}
+.nav-link:hover {
+  color: #18B5DC;
+}
+
+.button:hover {
+  border: 1px solid #18B5DC;
+  background-color: #18B5DC;
+  color: #fff;
+}
+
+.team__card-picture:hover .team__card-overlay {
+  display: flex;
+}
+
+.social-btn--dark:hover {
+  background-color: #fff;
+}
+.social-btn--dark:hover .social-icon--light {
+  color: #18B5DC;
+}
+
+.social-btn--light:hover {
+  background-color: #18B5DC;
+}
+.social-btn--light:hover .social-icon--dark {
+  color: #fff;
+}

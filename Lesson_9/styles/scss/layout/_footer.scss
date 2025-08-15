@@ -1,0 +1,29 @@
+@use '../abstracts/index' as a;
+
+.footer {
+  width: 100%;
+  background-color: a.$accent-bgc;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
+.footer__nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.footer__social {
+  display: flex;
+  gap: 10px;
+}
+
+@include a.bp-devices(m-mobile) {
+  .footer__nav {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,13 @@
+@use '../abstracts/index' as a;
+
+.container {
+  width: 100%;
+  max-width: 82%;
+  margin: 0 auto;
+}
+
+@include a.bp-devices(tablet) {
+  .container {
+    max-width: 90%;
+  }
+}
