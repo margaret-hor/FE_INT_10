@@ -1,7 +1,10 @@
 @mixin bp-devices($breakpoint) {
   @if $breakpoint == s-laptop {
     @media screen and (max-width: 1024px) { @content; } 
-  } 
+  }
+  @else if $breakpoint == l-laptop {
+    @media screen and (min-width: 1440px) { @content; }
+  }
   @else if $breakpoint == tablet {
     @media screen and (max-width: 768px) { @content; }
     }

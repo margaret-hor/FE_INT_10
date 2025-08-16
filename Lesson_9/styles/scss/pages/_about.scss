@@ -51,6 +51,11 @@
   gap: 4px;
 }
 
+@include a.bp-devices(l-laptop) {
+  .team__list {
+    justify-content: space-evenly;
+  }
+}
 @include a.bp-devices(tablet) {
   .team__list {
     gap: 20px;
