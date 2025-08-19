@@ -133,7 +133,7 @@ h1, h2, h3, h4 {
 }
 .container {
   width: 100%;
-  max-width: 82%;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -360,11 +360,6 @@ h1, h2, h3, h4 {
   gap: 4px;
 }
 
-@media screen and (min-width: 1440px) {
-  .team__list {
-    justify-content: space-evenly;
-  }
-}
 @media screen and (max-width: 768px) {
   .team__list {
     gap: 20px;
