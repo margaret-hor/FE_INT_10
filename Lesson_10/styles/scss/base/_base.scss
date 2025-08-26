@@ -1,0 +1,23 @@
+@use '../abstracts/index' as a;
+
+body {
+  @include a.bg-gradient(a.$bgc-mid, a.$bgc-dark);
+  animation: bgShift 40s ease-in-out infinite alternate;
+  font-family: a.$font-stack;
+  font-size: 16px;
+  color: a.$text-color;
+  scroll-behavior: smooth;
+}
+@keyframes bgShift {
+  0%{@include a.bg-gradient(a.$bgc-mid, a.$bgc-dark);}
+  50%{@include a.bg-gradient(a.$bgc-dark, a.$bgc-light)}
+  80%{@include a.bg-gradient(a.$bgc-light, a.$bgc-dark)}
+  100%{@include a.bg-gradient(a.$bgc-dark, a.$bgc-mid)}
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

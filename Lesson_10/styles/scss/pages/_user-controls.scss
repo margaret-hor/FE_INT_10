@@ -1,0 +1,46 @@
+@use '../abstracts/index' as a;
+
+.control-panel {
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 200px;
+  overflow: hidden;
+  padding: 20px;
+  background-color: a.$bgc-mid;
+} 
+.main-content {
+  margin-right: 200px;
+}
+
+@include a.bp-devices(monitor4k) {
+  .control-panel {
+    max-width: 350px;
+  }
+  .main-content {
+    margin-right: 350px;
+  }
+}
+@include a.bp-devices(tablet) {
+  .control-panel {
+    max-width: 150px;
+  }
+  .main-content {
+    margin-right: 150px;
+  }
+}
+@include a.bp-devices(l-mobile) {
+  .control-panel {
+    left: 0;
+    height: 80px;
+    max-width: 100%;
+    padding: 15px;
+  }
+  .main-content {
+    margin-right: 0;
+    margin-top: 80px;
+  }
+}

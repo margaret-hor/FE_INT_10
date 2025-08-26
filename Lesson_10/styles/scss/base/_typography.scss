@@ -1,0 +1,25 @@
+@use '../abstracts/index' as a;
+
+h1, h2, h3, h4, .heading, .subheading {
+  font-family: a.$font-title-sub;
+  color: a.$title-sub-color;
+}
+.flip_header {
+  text-align: center;
+  margin-bottom: 45px;
+  font-size: 32px;
+}
+.fcard_front_heading {
+  font-size: 30px;
+}
+
+@include a.bp-devices(monitor4k) {
+  .flip_card_back {
+    font-size: 18px;
+  }
+}
+@include a.bp-devices(tablet) {
+  .flip_header {
+    font-size: 30px;
+  }
+}

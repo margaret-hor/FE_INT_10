@@ -1,0 +1,28 @@
+@use '../abstracts/index' as a;
+
+.button {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.toggle-bg-btn {
+  padding: 10px;
+  background-color: a.$bgc-mid;
+  filter: brightness(1.4);
+  color: #fff;
+  border-radius: 5px;
+  transition: all .4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1) translateY(-20px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+@include a.bp-devices(l-mobile) {
+  .button {
+    font-size: 16px;
+  }
+}

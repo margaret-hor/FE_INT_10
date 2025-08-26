@@ -1,0 +1,48 @@
+@use '../abstracts/index' as a;
+
+.flip_wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  counter-reset: card-fortune;
+}
+.flip_card {
+  width: 100%;
+  height: 200px;
+  perspective: 1000px;
+
+  &:hover .flip_card_content {
+    transform: rotateY(180deg);
+  }
+}
+.flip_card_content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .8s;
+}
+.flip_card_front, .flip_card_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+}
+.flip_card_front {
+  border: 2px solid rgba(a.$bgc-dark, .5);
+  background-color: rgba(a.$bgc-light, .25);
+
+  & span::after {
+    counter-increment: card-fortune;
+    content: " #" counter(card-fortune);
+  }
+}
+.flip_card_back {
+  border: 2px solid transparent;
+  background-color: a.$bgc-mid;
+  filter: brightness(1.2);
+  transform: rotateY(180deg);
+}
