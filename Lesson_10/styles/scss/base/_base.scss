@@ -7,6 +7,11 @@ body {
   font-size: 16px;
   color: a.$text-color;
   scroll-behavior: smooth;
+  animation-play-state: running;
+
+  &.toggle-bg-off {
+    animation-play-state: paused;
+  }
 }
 @keyframes bgShift {
   0%{@include a.bg-gradient(a.$bgc-mid, a.$bgc-dark);}

@@ -5,6 +5,10 @@ body {
   font-size: 16px;
   color: #1c1425;
   scroll-behavior: smooth;
+  animation-play-state: running;
+}
+body.toggle-bg-off {
+  animation-play-state: paused;
 }
 
 @keyframes bgShift {
@@ -208,16 +212,20 @@ h1, h2, h3, h4, .heading, .subheading {
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-  border: 2px solid transparent;
 }
 
 .toggle-bg-btn {
   padding: 10px;
   background-color: #667eea;
-  filter: brightness(1.4);
   color: #fff;
+  filter: brightness(1.4);
+  border: 2px solid transparent;
   border-radius: 5px;
   transition: all 0.4s ease-in-out;
+}
+.toggle-bg-btn.bg-btn-off {
+  filter: brightness(1);
+  border: 2px solid #000;
 }
 .toggle-bg-btn:hover {
   transform: scale(1.1) translateY(-20px);
