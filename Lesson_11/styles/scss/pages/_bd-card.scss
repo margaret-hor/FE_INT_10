@@ -1,0 +1,18 @@
+@use '../abstracts/index' as a;
+
+.bd_card_content {
+  position: relative;
+  padding: 35px 30px;
+  background: linear-gradient(-45deg, a.$bgc-warm--mid, a.$bgc-warm--dark, a.$bgc-warm--light, a.$bgc-cold--mid);
+  background-size: 400% 400%;
+  animation: gradientWave 6s ease infinite;
+}
+@keyframes gradientWave {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+.bd_card_text {
+  text-align: center;
+  margin-bottom: 50px;
+}
