@@ -464,6 +464,12 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
   margin-bottom: 20px;
 }
+.input_footer:hover {
+  box-shadow: 5px 5px 20px #FF9900;
+}
+.input_footer:focus {
+  border: 3px solid #FF9900;
+}
 
 .hero_section {
   margin-bottom: 110px;

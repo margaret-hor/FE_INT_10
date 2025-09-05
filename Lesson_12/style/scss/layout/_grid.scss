@@ -1,0 +1,9 @@
+.form_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 10px;
+  margin-bottom: 20px;
+}
+.grid_item_full {
+  grid-column: 1 / -1;
+}

@@ -1,0 +1,30 @@
+@use '../abstracts/index' as a;
+
+.profile_container {
+  padding-bottom: 105px;
+}
+.photo_section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.profile_img {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+.current_photo {
+  width: 80px;
+  height: 80px;
+}
+.photo_controls {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+@include a.bp-devices(s-mobile) {
+  .current_photo {
+    height: 65px;
+  }
+}

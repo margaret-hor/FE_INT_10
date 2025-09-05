@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+  <script src="https://kit.fontawesome.com/8b7e845f0d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style/scss/css/main.css">
+</head>
+
+<body>
+  <div class="page_wrapper">
+    <header class="top_nav">
+      <div class="top_nav_inner">
+        <nav class="top_nav_links">
+          <a href="#" class="nav_link">nav link</a>
+          <a href="#" class="nav_link">nav link</a>
+          <a href="#" class="nav_link">nav link</a>
+        </nav>
+        <a href="./profile.html" class="profile_link">
+          <img src="./assets/images/profile_img.jpg" alt="Your profile picture" class="profile_img profile_link_img">
+        </a>
+      </div>
+    </header>
+    <main>
+      <section class="hero_section">
+        <div class="container hero_container">
+          <div class="hero_content">
+            <h1 class="heading hero_heading">Travel, enjoy and live a new and full life</h1>
+            <p class="hero_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta quidem rem eos
+              cupiditate omnis error in
+              deleniti, harum molestias!</p>
+            <a href="#sign-section" class="button signup_btn">sign up now</a>
+          </div>
+          <div class="hero_img">
+            <img src="./assets/images/hero_img.png" alt="">
+          </div>
+        </div>
+      </section>
+      <section id="sign-section">
+        <div class="actions_section actions_container sign_container">
+          <h2 class="heading actions_heading">Create an Account</h2>
+          <form action="#">
+            <div class="form_grid">
+              <div class="form_item">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" class="form_input" placeholder="John" required
+                  autocomplete="name">
+              </div>
+              <div class="form_item">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" class="form_input" placeholder="Doe" required
+                  autocomplete="name">
+              </div>
+              <div class="form_item grid_item_full">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" class="form_input" placeholder="example@email.com" required
+                  autocomplete="email">
+                <p class="description">We'll never share your email with anyone else.</p>
+              </div>
+              <div class="form_item grid_item_full">
+                <div class="radio_wrapper">
+                  <label class="radio_item">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <i class="fa-solid fa-circle-dot radio-btn"></i>
+                    <span>Male</span>
+                  </label>
+                  <label class="radio_item">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <i class="fa-solid fa-circle-dot radio-btn"></i>
+                    <span>Female</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form_item">
+                <label for="country">Country</label>
+                <div class="select_wrapper">
+                  <select name="country" id="country" class="form_input profile_form_select" required>
+                    <option value="" selected disabled>Select</option>
+                    <option value="us">USA</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                    <option value="de">Germany</option>
+                    <option value="fr">France</option>
+                    <option value="jp">Japan</option>
+                  </select>
+                  <i class="fa-solid fa-sort select_arrow"></i>
+                </div>
+              </div>
+              <div class="form_item">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" class="form_input" placeholder="Washington DC">
+              </div>
+            </div>
+
+            <button type="submit" class="button signup_form_btn">sign up</button>
+          </form>
+          <p class="description terms_desc">By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+          <div class="divider"></div>
+          <div class="login">
+            <span>Have an account?</span>
+            <a href="#">Log In</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+@use '../abstracts/index' as a;
+
+.support_btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: a.$bgc-cold--dark;
+  cursor: pointer;
+  box-shadow: 0 0 10px #fff, 0 0 20px a.$bgc-cold--light;
+}
+.support_btn_icon {
+  color: #fff;
+  font-size: 20px;
+}

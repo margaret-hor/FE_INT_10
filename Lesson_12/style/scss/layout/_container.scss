@@ -1,0 +1,17 @@
+@use '../abstracts/index' as a;
+
+.container {
+  width: 100%;
+  max-width: 1130px;
+  margin: 0 auto;
+}
+.actions_container {
+  width: 100%;
+  padding: 35px 35px 0;
+}
+.actions_section {
+  background-color: a.$bgc-container;
+  width: 100%;
+  max-width: 600px;
+  margin: 55px auto;
+}

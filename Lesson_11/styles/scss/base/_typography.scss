@@ -1,0 +1,42 @@
+@use '../abstracts/index' as a;
+
+h1, h2, h3, h4, .heading, .subheading {
+  text-transform: uppercase;
+  font-family: a.$font-title-sub;
+  color: a.$title-color;
+  letter-spacing: 5px;
+}
+h5, h6, .subheading {
+  color: a.$subtitle-color;
+}
+
+.bd_card_title {
+  font-size: 36px;
+  text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+  animation: titleBounce 3s ease infinite alternate;
+  margin-bottom: 40px;
+  transition: all .4s ease-in-out;
+
+  &:hover {
+    color: a.$accent-color;
+    text-shadow: 5px 5px 5px #fff, 
+    5px 5px 10px a.$bgc-warm--light,
+    5px 5px 20px a.$bgc-warm--mid,
+    5px 5px 30px a.$bgc-warm--dark;
+  }
+}
+@keyframes titleBounce {
+  0% {transform: translateY(-30px);}
+  100% {transform: translateY(30px);}
+}
+.bd_card_subtitle {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  animation: subtitleGlow 2s ease-in-out infinite alternate;
+}
+@keyframes subtitleGlow {
+  0% {text-shadow: 2px 2px 4px rgba(0,0,0,0.3);}
+  100% {text-shadow: 0 0 20px rgba(#fff,0.8);}
+}
+.bd_card_emoji {
+  font-size: 32px;
+}

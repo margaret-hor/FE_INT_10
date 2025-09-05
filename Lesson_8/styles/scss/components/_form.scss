@@ -7,4 +7,11 @@
   border: 1px solid a.$light-blue;
   border-radius: 4px;
   margin-bottom: 20px;
+
+  &:hover {
+    box-shadow: 5px 5px 20px a.$accent-color;
+  }
+  &:focus {
+    border: 3px solid a.$accent-color;
+  }
 }

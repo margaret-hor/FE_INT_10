@@ -1,0 +1,9 @@
+@use '../abstracts/index' as a;
+
+body {
+  background: radial-gradient(circle at center, a.$bgc-cold--light, a.$bgc-cold--mid, a.$bgc-cold--dark);
+  background-position: center;
+  font-family: a.$font-stack;
+  color: a.$text-color;
+  scroll-behavior: smooth;
+}

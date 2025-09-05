@@ -1,0 +1,29 @@
+@use '../abstracts/index' as a;
+
+.hero_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: a.$bgc-container;
+  padding: 80px 30px;
+}
+.hero_content {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px 30px;
+}
+.hero_img {
+  width: 400px;
+
+  & > img {
+    height: 350px;
+    object-fit: cover;
+    background-position: center;
+  }
+}
+
+@include a.bp-devices(l-mobile) {
+  .hero_img {
+    display: none;
+  }
+}

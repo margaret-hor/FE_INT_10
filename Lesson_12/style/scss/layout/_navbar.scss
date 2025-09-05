@@ -1,0 +1,41 @@
+@use '../abstracts/index' as a;
+
+.top_nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: a.$bgc-container;
+  box-shadow: 0 3px 10px rgba(130, 130, 130, 0.3);
+}
+.top_nav_inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+.top_nav_links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.nav_link {
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .4s ease;
+
+  &:hover {
+    color: a.$accent-color;
+  }
+}
+.profile_link_img {
+  width: 60px;
+  height: 60px;
+}
+
+@include a.bp-devices(s-mobile) {
+  .nav_link {
+    padding: 5px 5px;
+  }
+}

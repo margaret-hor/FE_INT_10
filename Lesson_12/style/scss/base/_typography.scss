@@ -1,0 +1,35 @@
+@use '../abstracts/index' as a;
+
+h1, h2, h3, h4, .heading {
+  color: a.$title-color;
+}
+.description {
+  color: a.$subtle-color;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+}
+.actions_heading {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+.hero_heading {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.hero_desc {
+  margin-bottom: 50px;
+}
+.terms_desc {
+  width: 100%;
+  max-width: 410px;
+  margin: 0 auto 20px;
+  text-align: center;
+
+  & a {
+    color: a.$accent-color;
+  }
+}

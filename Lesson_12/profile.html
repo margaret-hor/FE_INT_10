@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <script src="https://kit.fontawesome.com/8b7e845f0d.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/scss/css/main.css">
+</head>
+
+<body>
+  <div class="page_wrapper">
+    <section class="actions_section">
+      <div class="actions_container profile_container">
+        <h1 class="heading actions_heading">Profile</h1>
+        <form action="#">
+          <div class="photo_section">
+            <div>
+              <img src="./assets/images/profile_img.jpg" alt="Your current profile photo" class="current_photo profile_img">
+            </div>
+            <div class="photo_controls">
+              <div class="file_upload">
+                <div class="add_photo">
+                  <label class="upload_box">
+                    <input type="file" id="photo" name="photo" accept="image/*" class="file_input">
+                    <span class="file_name">Upload photo</span>
+                    <span class="camera"><i class="fa-solid fa-camera"></i></span>
+                  </label>
+                </div>
+                <p class="description">Up to 1 MB (300x300 px)</p>
+              </div>
+              <button type="button" class="delete_btn" onclick="deletePhoto()">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form_grid">
+            <div class="form_item">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" class="form_input" placeholder="John Doe" required autocomplete="name">
+            </div>
+            <div class="form_item">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" class="form_input" placeholder="example@email.com" required autocomplete="email">
+            </div>
+            <div class="form_item">
+              <label for="country">Country</label>
+              <div class="select_wrapper">
+                <select name="country" id="country" class="form_input profile_form_select" required>
+                  <option value="" selected disabled>Select</option>
+                  <option value="us">USA</option>
+                  <option value="ca">Canada</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="au">Australia</option>
+                  <option value="de">Germany</option>
+                  <option value="fr">France</option>
+                  <option value="jp">Japan</option>
+                </select>
+                <i class="fa-solid fa-sort select_arrow"></i>
+              </div>
+            </div>
+            <div class="form_item">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" class="form_input" placeholder="Washington DC">
+            </div>
+            <div class="form_item">
+              <label for="zip">Zip Code</label>
+              <input type="number" id="zip" name="zip" class="form_input" placeholder="3 37 01">
+            </div>
+            <div class="form_item">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form_input" autocomplete="tel" placeholder="+1 123 456 7890">
+            </div>
+          </div>
+
+          <button type="submit" class="button update_btn">Update</button>
+        </form>
+      </div>
+    </section>
+  </div>
+  <script src="./js/dist/index.dev.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+@use '../abstracts/index' as a;
+
+label {
+  display: inline-block;
+  font-size: 19px;
+  margin-bottom: 7px;
+}
+input, select, textarea {
+  font-size: 20px;
+}
+.file_upload {
+  width: 100%;
+  max-width: 145px;
+}
+.file_input {
+  display: none;
+}
+.add_photo {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid a.$input-border;
+  border-radius: 6px;
+  cursor: pointer;
+
+  & > label {
+    margin-bottom: 0;
+    cursor: pointer;
+    width: 100%;
+  }
+}
+.upload_box {
+  position: relative;
+}
+.file_name {
+  display: inline-block;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  color: a.$subtle-color;
+}
+.camera {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: a.$subtle-color;
+}
+.form_input {
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid a.$input-border;
+  border-radius: 6px;
+  color: a.$text-color;
+  transition: all .4s ease;
+
+  &:hover {
+    box-shadow: 0 0 8px rgba(26, 26, 26, 0.3);
+  }
+  &:focus {
+    border: 1px solid a.$accent-color;
+  }
+  &[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+.profile_form_select {
+  &:invalid {
+  color: a.$subtle-color;
+  }
+  &:valid {
+    color: a.$text-color;
+  }
+  & option {
+    color: a.$text-color;
+  }
+  & option[disabled] {
+    color: a.$subtle-color;
+  }
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+.select_wrapper {
+  position: relative;
+}
+.select_arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 13.5px;
+  color: a.$subtle-color;
+}
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+.radio_wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.radio_item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+input[type="radio"]:checked + .radio-btn {
+  color: a.$accent-color;
+}
+.radio-btn {
+  font-size: 20px;
+}
+
+@include a.bp-devices(m-mobile) {
+  label {
+    font-size: 18px;
+  }
+  input, select, textarea {
+  font-size: 17px;
+}
+}

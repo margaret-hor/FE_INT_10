@@ -1,0 +1,18 @@
+@use '../abstracts/index' as a;
+
+body {
+  font-family: a.$font-stack;
+  color: a.$text-color;
+  font-size: 15px;
+  background-color: a.$bgc;
+  scroll-behavior: smooth;
+}
+main {
+  margin-top: 80px;
+}
+
+@include a.bp-devices(s-mobile) {
+  main {
+    margin-top: 60px;
+  }
+}

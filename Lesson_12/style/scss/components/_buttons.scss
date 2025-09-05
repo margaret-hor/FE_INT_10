@@ -1,0 +1,40 @@
+@use '../abstracts/index' as a;
+
+.button {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  background-color: a.$accent-color;
+  color: #fff;
+  border: 1px solid a.$input-border;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+
+  &:hover {
+    background-color: #fff;
+    color: a.$accent-color;
+  }
+}
+.delete_btn {
+  color: a.$subtle-color;
+  font-size: 16px;
+  padding: 7px;
+  border: 1px solid a.$input-border;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.update_btn {
+  padding: 8px 50px;
+}
+.signup_btn {
+  padding: 15px 20px;
+}
+.signup_form_btn {
+  padding: 8px 0;
+  width: 100%;
+  margin-bottom: 22px;
+}
