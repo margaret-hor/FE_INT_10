@@ -1,0 +1,7 @@
+@use "../abstracts/index" as a;
+
+.quote_divider {
+  border: 1px solid rgba(a.$text-color, .5);
+  width: 30px;
+  margin-bottom: 10px;
+}

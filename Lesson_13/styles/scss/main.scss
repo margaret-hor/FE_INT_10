@@ -1,0 +1,12 @@
+@use "./abstracts/index";
+@use "./base/base";
+@use "./base/reset";
+@use "./base/typography";
+@use "./layout/container";
+@use "./layout/navbar";
+@use "./layout/flex";
+@use "./pages/awards";
+@use "./pages/services";
+@use "./pages/welcome";
+@use "./pages/works";
+@use "./components/divider";

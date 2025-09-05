@@ -1,0 +1,11 @@
+@use "../abstracts/index" as a;
+
+body {
+  background-color: a.$bgc;
+  color: a.$text-color;
+  font-family: a.$font-stack;
+  scroll-behavior: smooth;
+}
+main {
+  margin-top: 165px;
+}

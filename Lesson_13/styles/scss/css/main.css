@@ -1,0 +1,178 @@
+body {
+  background-color: #fff;
+  color: #111;
+  font-family: "Mulish", sans-serif;
+  scroll-behavior: smooth;
+}
+
+main {
+  margin-top: 165px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+}
+
+img, picture, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+  outline: none;
+  border: none;
+}
+
+.welcome_subheading {
+  color: #4A4FF2;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: -0.42px;
+  margin-bottom: 32px;
+}
+
+.welcome_heading {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 60px;
+}
+.welcome_heading span {
+  color: #4A4FF2;
+}
+
+.quote {
+  font-size: 18px;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.top_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.menu_actions {
+  display: flex;
+  align-items: center;
+  gap: 95px;
+}
+
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -0.35px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.social_icon {
+  font-size: 15px;
+  color: #000;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome {
+  margin-bottom: 144px;
+}
+
+.welcome_content {
+  width: 100%;
+  max-width: 635px;
+}
+
+.welcome_quote {
+  width: 100%;
+  max-width: 212px;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.works_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  row-gap: 20px;
+}
+
+.work img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.small_work {
+  grid-row: span 7;
+}
+
+.mid_work {
+  grid-row: span 8;
+}
+
+.big_work {
+  grid-row: span 9;
+}
+
+.large_work {
+  grid-row: span 11;
+}
+
+.extra-large_work {
+  grid-row: span 12;
+}
+
+.quote_divider {
+  border: 1px solid rgba(17, 17, 17, 0.5);
+  width: 30px;
+  margin-bottom: 10px;
+}

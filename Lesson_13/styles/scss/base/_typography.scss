@@ -1,0 +1,23 @@
+@use "../abstracts/index" as a;
+
+.welcome_subheading {
+  color: a.$accent-color;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: -0.42px;
+  margin-bottom: 32px;
+}
+.welcome_heading {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 60px;
+
+  & span {
+    color: a.$accent-color;
+  }
+}
+.quote {
+  font-size: 18px;
+  font-style: italic;
+  opacity: .6;
+}

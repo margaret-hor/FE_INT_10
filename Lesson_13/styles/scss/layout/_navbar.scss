@@ -1,0 +1,38 @@
+@use "../abstracts/index" as a;
+
+.top_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: a.$bgc;
+  z-index: 10;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+.menu_actions {
+  display: flex;
+  align-items: center;
+  gap: 95px;
+}
+.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -0.35px;
+}
+.social {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.social_icon {
+  font-size: 15px;
+  color: #000;
+}
