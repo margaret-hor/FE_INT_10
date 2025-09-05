@@ -170,12 +170,13 @@ input, select, textarea {
 
 .file_name {
   display: inline-block;
-  width: 70%;
+  width: 80%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 16px;
   color: #969696;
+  vertical-align: middle;
 }
 
 .camera {
