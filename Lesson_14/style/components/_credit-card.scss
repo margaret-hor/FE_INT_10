@@ -1,0 +1,22 @@
+.credit-card_bg {
+  fill: #f0c41b;
+}
+.magnetic_stripe {
+  fill: #806F5E;
+}
+.card-number-line {
+  fill: #F9EAB0;
+  rx: 15px;
+  ry: 15px;
+  height: 18px;
+
+  &.cnuml-small:nth-child(odd) {
+    width: 25px;
+  }
+  &.cnuml-small:nth-child(even) {
+    width: 35px;
+  }
+  &.cnuml-small:last-child {
+    width: 18px;
+  }
+}

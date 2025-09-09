@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+}
+
+img, picture, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+  outline: none;
+  border: none;
+}
+
+.credit-card_bg {
+  fill: #f0c41b;
+}
+
+.magnetic_stripe {
+  fill: #806F5E;
+}
+
+.card-number-line {
+  fill: #F9EAB0;
+  rx: 15px;
+  ry: 15px;
+  height: 18px;
+}
+.card-number-line.cnuml-small:nth-child(odd) {
+  width: 25px;
+}
+.card-number-line.cnuml-small:nth-child(even) {
+  width: 35px;
+}
+.card-number-line.cnuml-small:last-child {
+  width: 18px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.svg_imgs {
+  padding: 5px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
