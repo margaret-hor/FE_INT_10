@@ -48,13 +48,14 @@ button, input, select, textarea {
   ry: 15px;
   height: 18px;
 }
-.card-number-line.cnuml-small:nth-child(odd) {
+
+.card-nums .cnuml-small:nth-child(odd) {
   width: 25px;
 }
-.card-number-line.cnuml-small:nth-child(even) {
+.card-nums .cnuml-small:nth-child(even) {
   width: 35px;
 }
-.card-number-line.cnuml-small:last-child {
+.card-nums .cnuml-small:last-child {
   width: 18px;
 }
 

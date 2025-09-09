@@ -9,14 +9,15 @@
   rx: 15px;
   ry: 15px;
   height: 18px;
-
-  &.cnuml-small:nth-child(odd) {
+}
+.card-nums {
+  & .cnuml-small:nth-child(odd) {
     width: 25px;
   }
-  &.cnuml-small:nth-child(even) {
+  & .cnuml-small:nth-child(even) {
     width: 35px;
   }
-  &.cnuml-small:last-child {
+  & .cnuml-small:last-child {
     width: 18px;
   }
 }
