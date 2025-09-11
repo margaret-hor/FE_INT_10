@@ -44,19 +44,61 @@ button, input, select, textarea {
 
 .card-number-line {
   fill: #F9EAB0;
-  rx: 15px;
-  ry: 15px;
-  height: 18px;
+  rx: 7px;
+  ry: 7px;
+  height: 13px;
 }
 
 .card-nums .cnuml-small:nth-child(odd) {
-  width: 25px;
+  width: 20px;
 }
 .card-nums .cnuml-small:nth-child(even) {
-  width: 35px;
+  width: 30px;
 }
 .card-nums .cnuml-small:last-child {
-  width: 18px;
+  width: 13px;
+}
+
+.crown {
+  fill: none;
+  stroke: #000;
+  stroke-width: 20px;
+  stroke-linejoin: round;
+}
+
+.crown_under {
+  width: 250px;
+  height: 20px;
+  fill: #000;
+  rx: 10px;
+  ry: 10px;
+}
+
+.face-emoji {
+  fill: #FBD971;
+  cy: 200;
+  cx: 200;
+  r: 200;
+}
+
+.eye-closed {
+  width: 90px;
+  height: 20px;
+  rx: 10px;
+  ry: 10px;
+  fill: #F29C1F;
+}
+
+.mouth-closed {
+  height: 20px;
+  rx: 10px;
+  ry: 10px;
+  fill: #F0C419;
+}
+
+.eye-opened {
+  fill: #AF8066;
+  r: 32.5;
 }
 
 .container {

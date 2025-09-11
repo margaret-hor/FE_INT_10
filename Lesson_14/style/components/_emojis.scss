@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as v;
+
+.face-emoji {
+  fill: v.$emoji-face;
+  cy: 200;
+  cx: 200;
+  r: 200;
+}
+.eye-closed {
+  width: 90px;
+  height: 20px;
+  rx: 10px;
+  ry: 10px;
+  fill: #F29C1F;
+}
+.mouth-closed {
+  height: 20px;
+  rx: 10px;
+  ry: 10px;
+  fill: #F0C419;
+}
+.eye-opened {
+  fill: #AF8066;
+  r: 32.5;
+}
