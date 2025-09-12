@@ -34,6 +34,13 @@ button, input, select, textarea {
   border: none;
 }
 
+.calc-body {
+  width: 300px;
+  height: 400px;
+  rx: 10px;
+  ry: 10px;
+}
+
 .credit-card_bg {
   fill: #f0c41b;
 }
@@ -103,17 +110,14 @@ button, input, select, textarea {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .svg_imgs {
-  padding: 5px;
-}
-
-.flex-between {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 30px;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
 }
