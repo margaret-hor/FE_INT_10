@@ -1,0 +1,27 @@
+@use "../abstracts/index" as a;
+
+body {
+  background-color: a.$bgc;
+  color: a.$text-color;
+  font-family: a.$font-stack;
+  scroll-behavior: smooth;
+}
+.page_wrapper {
+  position: relative;
+}
+.container {
+  width: 100%;
+  max-width: 256px;
+  margin: 0 auto;
+}
+
+@include a.bp-devices(tablet) {
+  .container {
+    max-width: 615px;
+  }
+}
+@include a.bp-devices(l-laptop) {
+  .container {
+    max-width: 1160px;
+  }
+}
