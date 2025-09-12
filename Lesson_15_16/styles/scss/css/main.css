@@ -28,6 +28,7 @@ body {
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -123,7 +124,9 @@ h1, h2, h3, h4 {
 }
 .hero_img img {
   min-height: 285px;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
 }
 
