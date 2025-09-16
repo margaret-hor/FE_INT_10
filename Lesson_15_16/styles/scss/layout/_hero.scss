@@ -1,10 +1,12 @@
 @use "../abstracts/index" as a;
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
 }
 .hero_container {
   padding-top: 90px;
+  min-height: 100%;
 }
 .hero_content {
   width: 100%;
@@ -15,6 +17,7 @@
 }
 .hero_img {
   width: 100%;
+  z-index: 2;
 
   & img {
     min-height: 285px;
@@ -24,10 +27,25 @@
     object-position: center;
   }
 }
+.hero_arrow_wrapper {
+  position: absolute;
+  left: 144px;
+  bottom: 60px;
+  display: none;
+}
+.hero_arrow {
+  stroke: a.$bgc-subtle;
+  stroke-width: 3px;
+  transition: all .4s ease;
+
+  &:hover {
+    transform: scaleY(1.5);
+  }
+}
 
 @include a.bp-devices(tablet) {
   .hero_container {
-    padding-top: 165px;
+    padding-top: 100px;
   }
   .hero_content {
     max-width: 575px;
@@ -48,12 +66,12 @@
   }
   .hero_container {
     padding-top: 115px;
+    display: flex;
+    gap: 160px;
   }
   .hero_img {
     max-width: 585px;
-    position: absolute;
-    top: 60px;
-    right: 144px;
+    transform: translateY(-180px);
 
     & img {
       min-height: 700px;
@@ -63,5 +81,8 @@
     max-width: 415px;
     text-align: start;
     margin: 0;
+  }
+  .hero_arrow_wrapper {
+    display: block;
   }
 }

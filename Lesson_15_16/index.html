@@ -9,17 +9,26 @@
   <title>Musician</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@200..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Sans+3:wght@200..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./styles/scss/css/main.css">
 </head>
 
 <body>
   <div class="page_wrapper">
-    <header class="top-navbar">
-      <nav class="top-nav">
-        <a href="#" class="nav_link">Works</a>
-        <a href="#" class="nav_link">Services</a>
-        <a href="#" class="nav_link">Contacts</a>
+    <div class="kebab_wrapper">
+      <button class="kebab" onclick="toggleModal()">
+        <span class="kebab_dot"></span>
+      </button>
+    </div>
+    <header class="top-navbar" id="topNavbar">
+      <nav>
+        <ul class="top-nav">
+          <li><a href="#" class="nav_link">Works</a></li>
+          <li><a href="#" class="nav_link">Services</a></li>
+          <li><a href="#" class="nav_link">Contacts</a></li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -34,9 +43,18 @@
             <img src="./assets/images/hero_img.jpg" alt="Musician">
           </div>
         </div>
+        <div class="hero_arrow_wrapper">
+          <svg viewBox="0 0 60 60" width="60" height="60" class="hero_arrow">
+            <line x1="30" y1="10" x2="30" y2="46" />
+            <line x1="22" y1="40" x2="30" y2="48" />
+            <line x1="30" y1="48" x2="38" y2="40" />
+          </svg>
+        </div>
       </section>
     </main>
   </div>
+
+  <script src="./index.js"></script>
 </body>
 
 </html>

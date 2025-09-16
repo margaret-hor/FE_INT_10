@@ -1,5 +1,78 @@
+@use "../abstracts/index" as a;
+
 .top-navbar {
+  transform: translateY(-200%);
+  transition: all .4s ease;
   position: sticky;
   top: 0;
   left: 0;
+  background-color: a.$bgc;
+  z-index: 1;
+
+  &.active {
+    transform: translateY(0%);
+  }
+}
+.top-nav {
+  display: flex;
+  gap: 30px;
+  padding: 20px 15px;
+  max-width: 80%;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+  background: a.$bgc-subtle;
+  height: 3px;
+}
+}
+.kebab_wrapper {
+  background-color: a.$bgc;
+  padding: 10px 15px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  transform: translateY(0px);
+}
+.kebab {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  display: block;
+  width: 34px;
+  height: 34px;
+  margin-right: 0;
+  margin-left: auto;
+  cursor: pointer;
+
+  &::before, 
+  &::after,
+  .kebab_dot {
+    content: '';
+    display: inline-block;
+    background-color: a.$bgc-subtle;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+}
+
+@include a.bp-devices(tablet) {
+  .kebab_wrapper {
+    display: none;
+  }
+  .top-navbar {
+    transform: translateY(0%);
+  }
+  .top-nav {
+    flex-direction: row-reverse;
+    padding: 38px 15px;
+  }
+}
+@include a.bp-devices(l-laptop) {
+  .top-nav {
+    max-width: 415px;
+    margin-left: 140px;
+    margin-top: 30px;
+  }
 }
