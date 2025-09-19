@@ -1,0 +1,26 @@
+@use "../abstracts/index" as a;
+
+.search_circle {
+  r: 7px;
+  fill: none;
+  stroke-width: 1px;
+}
+.hero_search_circle {
+  stroke: a.$text-color;
+}
+.search_rect {
+  stroke-width: 1px;
+  fill: none;
+}
+.hero_search_rect {
+  stroke: a.$text-color;
+}
+.scroll_arrow_wrapper {
+  margin: 0 auto;
+  transition: all .3s ease;
+}
+.scroll_arrow {
+  fill: none;
+  stroke-width: 1px;
+  stroke: a.$text-color;
+}

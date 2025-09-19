@@ -1,0 +1,21 @@
+@use "../abstracts/index" as a;
+
+.button {
+  text-transform: uppercase;
+  font-family: a.$font-title;
+  color: a.$text-color;
+}
+.hero_search_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 22px;
+  background-color: a.$accent-color;
+  transition: all .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: a.$accent-color--dark;
+  }
+}

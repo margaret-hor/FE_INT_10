@@ -1,0 +1,41 @@
+@use "../abstracts/index" as a;
+
+.hero {
+  background-image: url(../../../assets/images/hero_bg.jpg);
+  object-fit: cover;
+  height: 100vh;
+  min-height: 740px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero_content {
+  text-align: center;
+  width: 100%;
+  max-width: 650px;
+}
+.hero_logo_wrapper {
+  margin-bottom: 50px;
+}
+.hero_search {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 2px;
+  background-color: a.$text-color;
+}
+.hero_scroll_wrapper {
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover .scroll_arrow_wrapper {
+    transform: scaleY(1.3);
+  }
+}

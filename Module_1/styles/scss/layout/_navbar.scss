@@ -1,0 +1,21 @@
+@use "../abstracts/index" as a;
+
+.top_header {
+  background-color: a.$accent-color;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.top_navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.nav_list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: a.$font-title;
+  font-size: 14px;
+}

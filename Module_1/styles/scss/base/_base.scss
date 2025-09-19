@@ -1,0 +1,14 @@
+@use "../abstracts/index" as a;
+
+body {
+  background-color: a.$bgc;
+  color: a.$text-color;
+  font-family: a.$font-stack;
+  line-height: 26px;
+  scroll-behavior: smooth;
+}
+.container {
+  width: 100%;
+  max-width: 1115px;
+  margin: 0 auto;
+}

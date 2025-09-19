@@ -1,0 +1,16 @@
+@use "../abstracts/index" as a;
+
+input::placeholder {
+  color: #999;
+}
+.search_input::placeholder {
+  font-size: 14px;
+  letter-spacing: 2.8px;
+}
+.search_input {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  color: #232323;
+  letter-spacing: 1.3px;
+}
