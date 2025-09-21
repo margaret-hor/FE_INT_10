@@ -5,17 +5,109 @@
   font-family: a.$font-title;
   color: a.$text-color;
 }
+
 .hero_search_btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  padding: 18px 22px;
+  letter-spacing: 1.4px;
+  padding: 8px 10px;
   background-color: a.$accent-color;
   transition: all .3s ease-in-out;
 
-  &:hover,
-  &:focus {
+  &:focus,
+  &:hover {
     background-color: a.$accent-color--dark;
+  }
+
+  &:active {
+    background-color: darken(a.$accent-color--dark, 1);
+  }
+}
+
+.search_btn_text {
+  display: none;
+}
+
+.gradient_btn {
+  letter-spacing: 1.2px;
+  background-color: a.$accent-color;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: a.$accent-color--dark;
+    clip-path: polygon(0% 0%, 55% 0%, 100% 100%, 0% 100%);
+    transition: transform 1s ease;
+  }
+
+  &:focus::before,
+  &:hover::before {
+    transform: scale(10);
+  }
+
+  &:active {
+    background-color: darken(a.$accent-color--dark, 1);
+
+    &::before {
+      transform: scale(0);
+    }
+  }
+}
+
+.gradient_btn_text {
+  position: relative;
+  z-index: 1;
+}
+
+.intro_btn {
+  padding: 15px 30px;
+  margin-bottom: 40px;
+}
+
+.resort_btn {
+  padding: 18px 62px;
+}
+
+@include a.bp-devices(tablet) {
+  .hero_search_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 22px;
+  }
+
+  .search_btn_text {
+    display: block;
+  }
+
+  .nav_hamburger {
+    display: none;
+  }
+
+  .intro_btn {
+    padding: 17px 37px;
+  }
+}
+
+@include a.bp-devices(monitor4k) {
+  .hero_search_btn {
+    padding: 30px;
+    gap: 40px;
+  }
+
+  .search_btn_text {
+    font-size: 30px;
+  }
+
+  .intro_btn {
+    padding: 25px 60px;
+  }
+  .gradient_btn_text {
+    font-size: 24px;
   }
 }

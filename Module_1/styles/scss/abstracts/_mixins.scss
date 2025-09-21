@@ -17,4 +17,7 @@
   @else if $breakpoint == m-mobile {
     @media screen and (min-width: 375px) { @content; }
   }
+  @else if $breakpoint == mobile {
+    @media screen and (max-width: 425px) { @content; }
+  }
 }

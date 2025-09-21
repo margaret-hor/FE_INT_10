@@ -4,13 +4,32 @@ input::placeholder {
   color: #999;
 }
 .search_input::placeholder {
-  font-size: 14px;
-  letter-spacing: 2.8px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
 }
 .search_input {
   width: 100%;
-  max-width: 350px;
+  max-width: 80%;
   margin: 0 auto;
   color: #232323;
   letter-spacing: 1.3px;
+}
+
+@include a.bp-devices(tablet) {
+  .search_input {
+    max-width: 350px;
+  }
+  .search_input::placeholder {
+    font-size: 14px;
+    letter-spacing: 2.8px;
+  }
+}
+@include a.bp-devices(monitor4k) {
+  .search_input {
+    max-width: 70%;
+  }
+  .search_input::placeholder {
+    font-size: 22px;
+    letter-spacing: 3.3px;
+  }
 }

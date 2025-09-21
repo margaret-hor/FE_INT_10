@@ -1,11 +1,197 @@
+@use "../abstracts/index" as a;
+
 .intro {
   background-image: url(../../../assets/images/intro_bg.jpg);
-  object-fit: cover;
-  padding: 115px 0;
+  padding: 90px 0;
 }
-.intro_content_wrapper {
+
+.intro_content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 110px;
+}
+
+.intro_text_wrapper {
+  width: 85%;
+  max-width: 560px;
+  text-align: center;
+}
+
+.intro_text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+.intro_imgs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 85%;
+  max-width: 440px;
+
+  & img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.steps_container {
+  padding: 50px 35px 65px;
+}
+
+.steps_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 120px;
+}
+
+.step_item {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+
+  &:not(:last-child) .step_icon::after {
+    content: '';
+    background-image: url(../../../assets/svg/curve.svg);
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 60px;
+    bottom: -200%;
+  }
+
+  &:nth-child(odd) .step_icon::after {
+    transform: rotate(90deg);
+  }
+
+  &:nth-child(even) .step_icon::after {
+    transform: rotate(-90deg);
+    left: -300%;
+  }
+}
+
+.step_icon {
+  position: relative;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+
+@include a.bp-devices(tablet) {
+  .intro {
+    padding: 115px 0;
+  }
+
+  .intro_content {
+    flex-direction: row;
+  }
+
+  .intro_text_wrapper {
+    width: 48%;
+    text-align: start;
+  }
+
+  .intro_imgs {
+    width: 45%;
+
+    & img {
+      max-width: 280px;
+      max-height: 180px;
+
+      &:nth-child(2n) {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .steps_container {
+    padding: 40px 15px 55px;
+  }
+
+  .steps_list {
+    flex-direction: row;
+  }
+
+  .step_item {
+    gap: 30px;
+
+    &:not(:last-child) .step_icon::after {
+      width: 180px;
+      top: -30%;
+      left: 105%;
+      transform: none;
+    }
+  }
+
+}
+
+@include a.bp-devices(s-laptop) {
+  .intro_text {
+    gap: 40px;
+    margin-bottom: 50px;
+    font-size: 16px;
+  }
+
+  .intro_imgs img {
+    max-width: 350px;
+    max-height: 220px;
+  }
+
+  .step_item:not(:last-child) .step_icon::after {
+    width: 250px;
+    top: -50%;
+    left: 110%;
+  }
+}
+
+@include a.bp-devices(l-laptop) {
+  .steps_container {
+    padding: 80px 60px 95px;
+  }
+
+  .step_item {
+    gap: 40px;
+
+    &:not(:last-child) .step_icon::after {
+      width: 300px;
+      left: 115%;
+      top: -70%;
+    }
+  }
+
+  .steps_list {
+    gap: 170px;
+  }
+}
+
+@include a.bp-devices(monitor4k) {
+  .intro_text_wrapper {
+    max-width: 60%;
+  }
+
+  .intro_imgs {
+    max-width: 40%;
+
+    & img {
+      max-width: none;
+      max-height: none;
+      width: 85%;
+      height: auto;
+    }
+  }
+
+  .intro_text {
+    font-size: 22px;
+    letter-spacing: 1.3px;
+    margin-bottom: 80px;
+  }
 }

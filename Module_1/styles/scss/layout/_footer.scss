@@ -1,0 +1,33 @@
+@use "../abstracts/index" as a;
+
+.main_footer {
+  background-color: a.$accent-bgc;
+  padding: 120px 0 50px;
+}
+.footer_content {
+  text-align: center;
+}
+.social_icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 4px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 250px;
+}
+.social_icon {
+  color: a.$text-subtle;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    color: a.$accent-color;
+  }
+}
+
+@include a.bp-devices(monitor4k) {
+  .social_icon {
+    font-size: 20px;
+  }
+}

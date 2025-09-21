@@ -1,20 +1,32 @@
 @use "../abstracts/index" as a;
 
-.search_circle {
-  r: 7px;
+.search_circle, 
+.search_line {
   fill: none;
-  stroke-width: 1px;
+}
+
+.hero_search_circle,
+.hero_search_line {
+  stroke: a.$text-color;
 }
 .hero_search_circle {
-  stroke: a.$text-color;
-}
-.search_rect {
   stroke-width: 1px;
-  fill: none;
 }
-.hero_search_rect {
-  stroke: a.$text-color;
+.hero_search_line {
+  stroke-width: 2px;
 }
+
+.steps_search_circle,
+.steps_search_line {
+  stroke: #5474FD;
+}
+.steps_search_circle {
+  stroke-width: 2px;
+}
+.steps_search_line {
+  stroke-width: 4px;
+}
+
 .scroll_arrow_wrapper {
   margin: 0 auto;
   transition: all .3s ease;
@@ -23,4 +35,32 @@
   fill: none;
   stroke-width: 1px;
   stroke: a.$text-color;
+}
+
+.steps_tick_circle,
+.steps_tick {
+  fill: none;
+  stroke: #FF6363;
+}
+.steps_tick_circle {
+  stroke-width: 2px;
+}
+.steps_tick {
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.steps_thumb_up {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #00A2FF;
+}
+
+@include a.bp-devices(monitor4k) {
+  .search_icon {
+    transform: scale(2);
+  }
+  .scroll_arrow_wrapper {
+    transform: scale(2);
+  }
 }

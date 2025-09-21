@@ -4,11 +4,43 @@ body {
   background-color: a.$bgc;
   color: a.$text-color;
   font-family: a.$font-stack;
-  line-height: 26px;
+  line-height: 20px;
   scroll-behavior: smooth;
+
+  &:has(.nav_active) {
+    overflow: hidden;
+  }
 }
 .container {
   width: 100%;
-  max-width: 1115px;
   margin: 0 auto;
+}
+.bg_img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@include a.bp-devices(tablet) {
+  .container {
+    max-width: 680px;
+  }
+}
+@include a.bp-devices(s-laptop) {
+  body {
+    line-height: 26px;
+  }
+  .container {
+    max-width: 950px;
+  }
+}
+@include a.bp-devices(l-laptop) {
+  .container {
+    max-width: 1115px;
+  }
+}
+@include a.bp-devices(monitor4k) {
+  .container {
+    max-width: 1550px;
+  }
 }

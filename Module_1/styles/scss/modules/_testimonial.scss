@@ -1,0 +1,45 @@
+@use "../abstracts/index" as a;
+
+.testimonial {
+  background-image: url("../../../assets/images/testimonial_bg.jpg");
+  padding: 110px 0 150px;
+}
+
+.testimonial_card {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial_img {
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.testimonial_text_wrapper {
+  background-color: a.$bgc;
+  padding: 30px;
+}
+
+.testimonial_quote_mark {
+  color: a.$accent-color;
+  font-size: 36px;
+  margin-right: 5px;
+}
+
+@include a.bp-devices(s-laptop) {
+  .testimonial {
+    padding: 128px 0 200px;
+  }
+
+  .testimonial_card {
+    flex-direction: row;
+  }
+
+  .testimonial_img {
+    max-height: none;
+  }
+
+  .testimonial_text_wrapper {
+    padding: 50px 62px 25px 40px;
+  }
+}

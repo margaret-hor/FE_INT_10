@@ -1,22 +1,186 @@
+@use "../abstracts/index" as a;
+
+.desc {
+  color: a.$text-subtle;
+}
+
 .logo {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 24px;
-  letter-spacing: 2.5px;
+  font-size: 1.2em;
+  letter-spacing: 2px;
 }
+
 .main_logo {
-  font-size: 48px;
-  letter-spacing: 4.8;
+  font-size: 2em;
+  letter-spacing: 3.6px;
   margin-bottom: 11px;
 }
+
+.footer_logo {
+  margin-bottom: 8px;
+}
+
 .slogan {
   text-transform: capitalize;
-  font-size: 22px;
-  letter-spacing: 6.8px;
 }
+
+.hero_slogan {
+  font-size: 1.2em;
+  letter-spacing: 4.5px;
+}
+
+.footer_slogan {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  margin-bottom: 30px;
+}
+
 .hero_scroll_text {
+  display: block;
   text-transform: capitalize;
   font-size: 14px;
   letter-spacing: 2.8px;
   margin-bottom: 2px;
+}
+
+.section_title {
+  text-transform: capitalize;
+  font-family: a.$font-title;
+}
+
+.intro_title {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.intro_text {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+}
+
+.step_text {
+  color: a.$text-subtle;
+  font-size: 26px;
+  font-family: a.$font-title;
+  text-transform: capitalize;
+}
+
+.resort_subtitle {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  margin-bottom: 23px;
+}
+
+.resort_title {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+.resort_desc {
+  font-size: 14px;
+  margin-bottom: 45px;
+}
+
+.testimonial_title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 70px;
+}
+
+.testimonial_card_title {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+@include a.bp-devices(tablet) {
+  .logo {
+    font-size: 24px;
+    letter-spacing: 2.5px;
+  }
+
+  .main_logo {
+    font-size: 48px;
+    letter-spacing: 4.8px;
+  }
+
+  .hero_slogan {
+    font-size: 22px;
+    letter-spacing: 6.8px;
+  }
+
+  .step_text {
+    font-size: 22px;
+  }
+
+  .resort_desc {
+    font-size: 16px;
+  }
+
+  .testimonial_title {
+    font-size: 36px;
+    margin-bottom: 90px;
+  }
+}
+
+@include a.bp-devices(s-laptop) {
+  .intro_title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  .step_text {
+    font-size: 36px;
+  }
+}
+
+@include a.bp-devices(monitor4k) {
+  .logo {
+    font-size: 36px;
+    letter-spacing: 3.7px;
+  }
+  .main_logo {
+    font-size: 72px;
+    letter-spacing: 7.2px;
+    margin-bottom: 20px;
+  }
+
+  .hero_slogan {
+    font-size: 30px;
+    letter-spacing: 8px;
+  }
+
+  .hero_scroll_text {
+    font-size: 22px;
+    letter-spacing: 3.3px;
+    margin-bottom: 20px;
+  }
+  .intro_title {
+    font-size: 60px;
+    margin-bottom: 80px;
+  }
+  .resort_subtitle {
+    font-size: 24px;
+  }
+  .resort_title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .resort_desc {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .testimonial_card_title {
+    font-size: 24px;
+  }
+  .testimonial_card_desc {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  .footer_slogan {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
 }
