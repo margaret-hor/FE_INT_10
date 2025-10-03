@@ -19,7 +19,7 @@ function checkIdenticalDigits() {
 //2 task
 // not sure abt that
 function currencyConverter() {
-  const exchangeRates = {EUR:0.85, SEK:9.41, AUD:1.51, GBP:0.74, CAD:1.39, JPY:147.81};
+  const exchangeRates = { EUR: 0.85, SEK: 9.41, AUD: 1.51, GBP: 0.74, CAD: 1.39, JPY: 147.81 };
   const usdRequest = parseFloat(prompt("Enter amount in USD:"));
   if (isNaN(usdRequest) || usdRequest <= 0) {
     alert("Invalid amount! Please enter a positive number.");
@@ -42,11 +42,41 @@ function currencyConverter() {
 
     console.log(`${usdRequest} USD = ${convertedAmount} ${selectedCurrency} (exchange rate = ${rate})`);
   } else {
-    alert("Invalid choice!")
+    alert("Invalid choice!");
   }
 }
 
 //task 3
 function nextDate() {
+  let dayRequest = parseInt(prompt("Enter day"));
+  let monthRequest = parseInt(prompt("Enter month"));
+  let yearRequest = parseInt(prompt("Enter year"));
+
+  if((isNaN(dayRequest) || isNaN(monthRequest) || isNaN(yearRequest)) || (dayRequest > 31 || dayRequest <= 0) || (monthRequest > 12 || monthRequest <= 0) || (yearRequest <= 0)) {
+    alert("Invalid choice for day, month, or year!");
+    return;
+  }
+
+  const leapYear = (yearRequest % 4 === 0 && yearRequest % 100 !== 0) || yearRequest % 400 === 0;
+  const daysInMonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  if (leapYear) daysInMonth[2] = 29;
+
+  if (dayRequest > daysInMonth[monthRequest]) {
+    alert("Invalid day for the selected month/year!");
+    return; 
+  }
+
+  dayRequest++;
   
-}
+  if (dayRequest > daysInMonth[monthRequest]) {
+    dayRequest = 1;
+    monthRequest++;
+  }
+  
+  if (monthRequest > 12) {
+    monthRequest = 1;
+    yearRequest++;
+  }
+
+  console.log(`The next date is: ${dayRequest}:${monthRequest}:${yearRequest}`);
+} 
