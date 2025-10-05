@@ -497,7 +497,7 @@ input::placeholder {
   }
 }
 .hero {
-  background-image: url(../../../assets/images/hero_bg.jpg);
+  background-image: url(../../../assets/images/hero_bg.webp);
   height: 100vh;
   width: 100%;
   display: flex;
@@ -585,7 +585,7 @@ input::placeholder {
   padding: 10px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 670px) {
   .top_nav {
     transform: translateX(100%);
     position: fixed;
