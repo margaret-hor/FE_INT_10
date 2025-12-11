@@ -1,0 +1,49 @@
+@use "../abstracts/index" as a;
+
+.nav_cta {
+  font-size: 14px;
+  font-family: a.$font-accent;
+  color: a.$accent-color--light;
+  text-transform: uppercase;
+}
+
+.hero_title {
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 8px; //10%
+  margin-bottom: 40px;
+}
+.hero_subtitle {
+  font-size: 18px;
+  letter-spacing: 5.4px; //30%
+  font-weight: 300;
+}
+
+.section_title {
+  font-family: a.$font-title;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 44px;
+}
+.main_section_title {
+  text-align: center;
+  margin-bottom: 90px;
+}
+.subtitle {
+  font-family: a.$font-title;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+ 
+.project_card_content .title {
+  margin-bottom: 20px;
+}
+.project_card_content p {
+  font-size: 18px;
+  line-height: 30px;
+}
+.loc_txt {
+  color: a.$accent-color--dark;
+  font-size: 15px;
+  font-style: italic;
+}

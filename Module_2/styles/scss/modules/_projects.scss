@@ -1,0 +1,86 @@
+@use "../abstracts/index" as a;
+
+.projects {
+  margin-bottom: 100px;
+  padding-bottom: 40px;
+}
+
+.project_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.project_card_media {
+  position: relative;
+
+  &>img {
+    width: 560px;
+    height: 400px;
+  }
+}
+
+.project_card_media--left::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -57px;
+  left: -35%;
+  width: 90%;
+  max-width: 510px;
+  height: 400px;
+  background-color: a.$accent-bgc1;
+  z-index: -1;
+}
+
+.project_card_media--right::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -57px;
+  left: 35%;
+  width: 90%;
+  max-width: 510px;
+  height: 400px;
+  background-color: a.$accent-bgc2;
+  z-index: -1;
+}
+
+.project_card_content {
+  width: 100%;
+  max-width: 470px;
+}
+
+.project_card_desc {
+  margin-bottom: 40px;
+}
+
+.loc_wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.loc_icon_fill {
+  fill: a.$text-color;
+}
+
+@include a.bp-devices(l-laptop) {
+  .project_card_media>img {
+    width: 630px;
+    height: 470px;
+  }
+
+  .project_card_media--left::before {
+    top: -57px;
+    max-width: 585px;
+    height: 470px;
+  }
+
+  .project_card_media--right::after {
+    top: -57px;
+    max-width: 585px;
+    height: 470px;
+  }
+}

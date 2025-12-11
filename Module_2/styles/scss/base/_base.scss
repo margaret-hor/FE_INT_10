@@ -1,0 +1,36 @@
+@use "../abstracts/index" as a;
+
+body {
+  background-color: a.$bgc;
+  color: a.$text-color;
+  font-family: a.$font-stack;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.bg_img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.img_cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.separator::before {
+  content: '';
+  display: block;
+  width: 100px;
+  margin: 0 auto 30px;
+}
+.separator--dark::before {
+  border: 1px solid a.$text-color;
+}

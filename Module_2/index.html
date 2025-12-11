@@ -1,12 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Montichello</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&family=Source+Sans+3:wght@200..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
   <link rel="stylesheet" href="./styles/scss/css/main.css">
 </head>
+
 <body>
+  <div class="page_wrapper">
+    <main>
+      <section class="hero bg_img">
+        <div class="container">
+          <header class="hero_header">
+            <div class="header_logo">
+              <img src="./assets/icons/Logo.svg" class="img_cover" alt="Monticello">
+            </div>
+            <div class="header_nav_wrapper">
+              <nav class="header_nav">
+                <ul>
+                  <li><a href="#about" class="nav_cta">about us</a></li>
+                  <li><a href="#projects" class="nav_cta">projects</a></li>
+                  <li><a href="#news" class="nav_cta">news</a></li>
+                  <li><a href="#contact" class="nav_cta">contact</a></li>
+                </ul>
+              </nav>
+              <div class="social_wrapper">
+                <button class="social-btn"><i class="fa-brands fa-facebook-f"></i></button>
+                <button class="social-btn"><i class="fa-brands fa-twitter"></i></button>
+                <button class="social-btn"><i class="fa-brands fa-instagram"></i></button>
+              </div>
+            </div>
+          </header>
+          <div class="hero_text">
+            <div class="hero_slide">
+              <h2 class="hero_title">simple &amp; modern</h2>
+              <h3 class="hero_subtitle">we make the world beautiful everyday</h3>
+            </div>
+            <div class="hero_slide">
+              <h2 class="hero_title">slide 2</h2>
+              <h3 class="hero_subtitle">we make the world beautiful everyday</h3>
+            </div>
+            <div class="hero_slide">
+              <h2 class="hero_title">slide 3</h2>
+              <h3 class="hero_subtitle">we make the world beautiful everyday</h3>
+            </div>
+            <div class="hero_carousel_slide">
+              <h2 class="hero_title">slide 4</h2>
+              <h3 class="hero_subtitle">we make the world beautiful everyday</h3>
+            </div>
+            <div class="hero_slide">
+              <h2 class="hero_title">slide 5</h2>
+              <h3 class="hero_subtitle">we make the world beautiful everyday</h3>
+            </div>
+          </div>
+          <div class="hero_arrow_wrapper">
+            <button id="scroll-btn" aria-label="Scroll down to next section"><i class="fa-solid fa-angle-down"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="projects separator separator--dark">
+        <div class="container">
+          <h2 class="title section_title">what we do</h2>
+          <div class="project_card">
+            <div class="project_card_media project_card_media--left">
+              <img src="./assets/images/project1.jpg" class="img_cover" alt="Project name">
+            </div>
+            <div class="project_card_content">
+              <div class="project_card_desc">
+                <h4 class="subtitle">one world</h4>
+                <h3 class="title">trade center</h3>
+                <p>Increasing prosperity in our lives can be
+                  accomplished by having the right frame of mind.
+                  The truth is, our thoughts are very powerful.</p>
+              </div>
+              <div class="project_card_interact">
+                <button class="button project_card_btn">more details</button>
+                <div class="loc_wrapper">
+                  <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="loc_icon_fill"
+                      d="M6.42857 4.28577C6.42857 5.46601 5.46596 6.42862 4.28571 6.42862C3.10547 6.42862 2.14286 5.46601 2.14286 4.28577C2.14286 3.10552 3.10547 2.14291 4.28571 2.14291C5.46596 2.14291 6.42857 3.10552 6.42857 4.28577ZM8.57143 4.28577C8.57143 1.9169 6.65458 5.16772e-05 4.28571 5.16772e-05C1.91685 5.16772e-05 0 1.9169 0 4.28577C0 4.79637 0.0585938 5.32371 0.276228 5.78409L3.33147 12.2629C3.49888 12.6312 3.88393 12.8572 4.28571 12.8572C4.6875 12.8572 5.07254 12.6312 5.24833 12.2629L8.2952 5.78409C8.51284 5.32371 8.57143 4.79637 8.57143 4.28577Z" />
+                  </svg>
+                  <span class="loc_txt">New York City, United States - 1776 feet </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- <section class="projects">
+        <div class="container">
+          <div class="project_card">
+            <div class="project_card_content">
+              <div class="project_card_desc">
+                <h4 class="subtitle">international</h4>
+                <h3 class="title">commerce centre</h3>
+                <p>Successful businesses have many things in common,
+                  today we’ll look at the big ‘R’ of recognition and how
+                  a digital advertising network may help.</p>
+              </div>
+              <div class="project_card_interact">
+                <button class="button project_card_btn">more details</button>
+                <div class="loc_wrapper">
+                  <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="loc_icon_fill"
+                      d="M6.42857 4.28577C6.42857 5.46601 5.46596 6.42862 4.28571 6.42862C3.10547 6.42862 2.14286 5.46601 2.14286 4.28577C2.14286 3.10552 3.10547 2.14291 4.28571 2.14291C5.46596 2.14291 6.42857 3.10552 6.42857 4.28577ZM8.57143 4.28577C8.57143 1.9169 6.65458 5.16772e-05 4.28571 5.16772e-05C1.91685 5.16772e-05 0 1.9169 0 4.28577C0 4.79637 0.0585938 5.32371 0.276228 5.78409L3.33147 12.2629C3.49888 12.6312 3.88393 12.8572 4.28571 12.8572C4.6875 12.8572 5.07254 12.6312 5.24833 12.2629L8.2952 5.78409C8.51284 5.32371 8.57143 4.79637 8.57143 4.28577Z" />
+                  </svg>
+                  <span class="loc_txt">Hong Kong - 1588 feet</span>
+                </div>
+              </div>
+            </div>
+            <div class="project_card_media project_card_media--right">
+              <img src="./assets/images/project2.jpg" class="img_cover" alt="Project name">
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </main>
+  </div>
+
+  <script src="https://kit.fontawesome.com/8b7e845f0d.js" crossorigin="anonymous"></script>
   
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script src="./javascript/main.js"></script>
 </body>
+
 </html>

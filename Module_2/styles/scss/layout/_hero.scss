@@ -1,0 +1,128 @@
+@use "../abstracts/index" as a;
+
+.hero {
+  background-image: url(../../../assets/images/hero_img.webp);
+  min-height: 100vh;
+  position: relative;
+  margin-bottom: 100px;
+  z-index: -2;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .9;
+    background: a.$accent-bgc1;
+    background: linear-gradient(45deg, a.$accent-bgc1 0%, a.$accent-bgc2 100%);
+    z-index: -1;
+  }
+}
+
+.hero_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // gap: 145px;
+  padding: 50px 0;
+}
+
+.header_logo {
+  max-width: 240px;
+  max-height: 55px;
+}
+
+.header_nav_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 110px;
+}
+
+.header_nav {
+
+  & ul {
+    display: flex;
+    gap: 70px;
+  }
+
+  & li {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 9px;
+      height: 9px;
+      border: 1px solid a.$accent-color--light;
+      border-radius: 50%;
+      background-color: transparent;
+    }
+
+    &:hover::before,
+    &:active::before {
+      background-color: a.$accent-color--light;
+    }
+  }
+}
+
+.social_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero_text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  font-family: a.$font-title;
+  text-transform: uppercase;
+  color: a.$accent-color--light;
+}
+
+.slick-dots {
+  position: absolute;
+  right: 55px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  & li:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  & button {
+    font-size: 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid a.$accent-color--light;
+    border-radius: 50%;
+    transition: all .3s ease;
+  }
+}
+
+.slick-active button,
+.slick-dots button:hover {
+  background-color: a.$accent-color--light;
+}
+
+.hero_arrow_wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+}
