@@ -23,8 +23,12 @@
       <section class="hero bg_img">
         <div class="container">
           <header class="hero_header">
-            <div class="header_logo">
-              <img src="./assets/icons/Logo.svg" class="img_cover" alt="Monticello">
+            <div>
+              <img src="./assets/icons/Logo.svg" class="img_cover header_logo" alt="Monticello">
+            </div>
+            <div class="hamburger_wrapper" id="hamburger_wrapper">
+              <button class="hamburger" id="hamburger" onclick="toggleModal()"><span
+                  class="hamburger_line"></span></button>
             </div>
             <div class="header_nav_wrapper">
               <nav class="header_nav">
@@ -64,8 +68,9 @@
               <h3 class="hero_subtitle">we make the world beautiful everyday</h3>
             </div>
           </div>
-          <div class="hero_arrow_wrapper">
-            <button id="scroll-btn" aria-label="Scroll down to next section"><i class="fa-solid fa-angle-down"></i></button>
+          <div class="hero_scroll_wrapper">
+            <button id="scroll-btn" aria-label="Scroll down to next section"><i
+                class="fa-solid fa-angle-down"></i></button>
           </div>
         </div>
       </section>
@@ -132,7 +137,7 @@
   </div>
 
   <script src="https://kit.fontawesome.com/8b7e845f0d.js" crossorigin="anonymous"></script>
-  
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

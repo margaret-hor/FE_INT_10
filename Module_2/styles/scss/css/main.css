@@ -7,7 +7,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1170px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -35,6 +35,11 @@ body {
   border: 1px solid #2C4058;
 }
 
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1170px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +50,11 @@ body {
 html {
   -webkit-text-size-adjust: 100%;
   line-height: 1.15;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 img, picture, svg {
@@ -152,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-btn,
-.hero_arrow_wrapper button {
+.hero_scroll_wrapper button {
   width: 40px;
   height: 40px;
   background-color: transparent;
@@ -162,18 +172,18 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
 }
 .social-btn:hover, .social-btn:active,
-.hero_arrow_wrapper button:hover,
-.hero_arrow_wrapper button:active {
+.hero_scroll_wrapper button:hover,
+.hero_scroll_wrapper button:active {
   transform: scale(1.1);
   box-shadow: 0 5px 5px #2C4058;
 }
 .social-btn > i,
-.hero_arrow_wrapper button > i {
+.hero_scroll_wrapper button > i {
   color: #fff;
   font-size: 15px;
 }
 
-.hero_arrow_wrapper button {
+.hero_scroll_wrapper button {
   animation: bounce 2s infinite;
 }
 
@@ -222,14 +232,67 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header_logo {
-  max-width: 240px;
-  max-height: 55px;
+  max-width: 170px;
 }
 
 .header_nav_wrapper {
   display: flex;
   align-items: center;
   gap: 110px;
+  transform: translateX(100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.header_nav_wrapper.nav_active {
+  transform: translateX(0);
+}
+
+.hamburger {
+  background-color: transparent;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after,
+.hamburger .hamburger_line {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+
+.hamburger_wrapper.hamburger_wrapper_active {
+  position: fixed;
+  top: 20px;
+  right: 15px;
+  z-index: 11;
+}
+
+.hamburger.hamburger_active .hamburger_line {
+  opacity: 0;
+}
+
+.hamburger.hamburger_active::before,
+.hamburger.hamburger_active::after {
+  position: absolute;
+  top: 50%;
+}
+
+.hamburger.hamburger_active::before {
+  transform: rotate(45deg);
+}
+
+.hamburger.hamburger_active::after {
+  transform: rotate(-45deg);
 }
 
 .header_nav ul {
@@ -301,13 +364,18 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
 }
 
-.hero_arrow_wrapper {
+.hero_scroll_wrapper {
   position: absolute;
   left: 50%;
   bottom: 50px;
   transform: translateX(-50%);
 }
 
+@media screen and (min-width: 768px) {
+  .header_logo {
+    max-width: 240px;
+  }
+}
 .projects {
   margin-bottom: 100px;
   padding-bottom: 40px;

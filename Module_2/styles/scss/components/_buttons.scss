@@ -15,7 +15,7 @@
 }
 
 .social-btn,
-.hero_arrow_wrapper button {
+.hero_scroll_wrapper button {
   width: 40px;
   height: 40px;
   background-color: transparent;
@@ -36,7 +36,7 @@
   }
 }
 
-.hero_arrow_wrapper button {
+.hero_scroll_wrapper button {
   animation: bounce 2s infinite;
 }
 @keyframes bounce {
