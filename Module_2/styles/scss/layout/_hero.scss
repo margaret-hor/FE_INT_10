@@ -1,12 +1,12 @@
 @use "../abstracts/index" as a;
 
 .hero {
-  background-image: url(../../../assets/images/hero_img.webp);
+  background-image: url('../../../assets/images/hero_img.webp');
   min-height: 100vh;
   position: relative;
   margin-bottom: 55px;
 
-  &::after {
+  &::before {
     content: '';
     display: block;
     position: absolute;
@@ -20,15 +20,6 @@
   }
 }
 
-.hero_content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-}
-
 .hero_header {
   display: flex;
   align-items: center;
@@ -38,6 +29,7 @@
 
 .header_logo {
   max-width: 170px;
+  position: relative;
 }
 
 .header_nav_wrapper {

@@ -1,0 +1,20 @@
+@use "../abstracts/index" as a;
+
+.news {
+  background-image: url('../../../assets/images/news_bg.svg');
+  position: relative;
+  padding: 135px 0 145px;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: a.$accent-bgc1;
+    background: linear-gradient(45deg, a.$accent-bgc3 0%, a.$accent-bgc1 100%);
+  }
+}

@@ -21,11 +21,13 @@
   <div class="page_wrapper">
     <main>
       <section class="hero bg_img">
-        <div class="container hero_content">
+        <div class="container">
           <header class="hero_header">
-            <a href="#">
-              <img src="./assets/icons/Logo.svg" class="img_cover header_logo" alt="Monticello">
-            </a>
+            <div class="header_logo">
+              <a href="#">
+                <img src="./assets/icons/Logo.svg" class="img_cover" alt="Monticello">
+              </a>
+            </div>
             <div class="hamburger_wrapper" id="hamburger_wrapper">
               <button class="hamburger" id="hamburger" onclick="toggleModal()"><span
                   class="hamburger_line"></span></button>
@@ -75,9 +77,9 @@
         </div>
       </section>
 
-      <section class="projects separator separator--dark" id="projects">
+      <section class="projects" id="projects">
         <div class="container">
-          <h2 class="section_title section_title--main">what we do</h2>
+          <h2 class="section_title section_title--main separator">what we do</h2>
           <div class="project_card">
             <div class="project_card_media">
               <img src="./assets/images/project1.jpg" class="img_cover" alt="Project name">
@@ -131,6 +133,13 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="news bg_img" id="news">
+        <div class="container">
+          <h2 class="section_title section_title--main section_title--inverted separator separator--inverted">latest news</h2>
+          <div class="news_carousel"></div>
         </div>
       </section>
     </main>
