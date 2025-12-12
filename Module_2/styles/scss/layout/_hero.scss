@@ -5,7 +5,6 @@
   min-height: 100vh;
   position: relative;
   margin-bottom: 100px;
-  z-index: -2;
 
   &::after {
     content: '';
@@ -18,15 +17,22 @@
     opacity: .9;
     background: a.$accent-bgc1;
     background: linear-gradient(45deg, a.$accent-bgc1 0%, a.$accent-bgc2 100%);
-    z-index: -1;
   }
+}
+
+.hero_content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .hero_header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // gap: 145px;
   padding: 50px 0;
 }
 
@@ -35,18 +41,17 @@
 }
 
 .header_nav_wrapper {
-  display: flex;
-  align-items: center;
-  gap: 110px;
-
   transform: translateX(100%);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  background: a.$accent-bgc1;
+  background: linear-gradient(45deg, a.$accent-bgc1 0%, a.$accent-bgc2 100%);
+  z-index: 3;
 
-  &.nav_active {
+  &.nav--active {
     transform: translateX(0);
   }
 }
@@ -71,65 +76,51 @@
   transition: all 0.5s ease;
 }
 
-.hamburger_wrapper.hamburger_wrapper_active {
+.hamburger_wrapper.hamburger_wrapper--active {
   position: fixed;
-  top: 20px;
+  top: 30px;
   right: 15px;
   z-index: 11;
 }
 
-.hamburger.hamburger_active .hamburger_line {
+.hamburger.hamburger--active .hamburger_line {
   opacity: 0;
 }
 
-.hamburger.hamburger_active::before,
-.hamburger.hamburger_active::after {
+.hamburger.hamburger--active::before,
+.hamburger.hamburger--active::after {
   position: absolute;
   top: 50%;
 }
 
-.hamburger.hamburger_active::before {
+.hamburger.hamburger--active::before {
   transform: rotate(45deg);
 }
 
-.hamburger.hamburger_active::after {
+.hamburger.hamburger--active::after {
   transform: rotate(-45deg);
 }
 
 .header_nav {
-
-  & ul {
-    display: flex;
-    gap: 70px;
-  }
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 100%;
+  transform: translate(-50%, -40%);
+  text-align: center;
 
   & li {
     position: relative;
-    padding-left: 25px;
+    padding: 15px 0;
     cursor: pointer;
-    transition: all .3s ease;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 9px;
-      height: 9px;
-      border: 1px solid a.$accent-color--light;
-      border-radius: 50%;
-      background-color: transparent;
-    }
-
-    &:hover::before,
-    &:active::before {
-      background-color: a.$accent-color--light;
-    }
   }
 }
 
 .social_wrapper {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 20px;
@@ -150,12 +141,12 @@
 
 .slick-dots {
   position: absolute;
-  right: 55px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
 
   & li:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
   }
 
   & button {
@@ -185,5 +176,83 @@
 @include a.bp-devices(tablet) {
   .header_logo {
     max-width: 240px;
+  }
+}
+
+@include a.bp-devices(s-laptop) {
+  .header_logo {
+    max-width: 210px;
+  }
+
+  .header_nav_wrapper {
+    transform: translateX(0);
+    position: static;
+  }
+
+  .header_nav_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: transparent;
+  }
+
+  .header_nav {
+    position: static;
+    transform: none;
+
+    & ul {
+      display: flex;
+      gap: 40px;
+    }
+
+    & li {
+      padding: 0 0 0 25px;
+      transition: all .3s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 9px;
+        height: 9px;
+        border: 1px solid a.$accent-color--light;
+        border-radius: 50%;
+        background-color: transparent;
+      }
+
+      &:hover::before,
+      &:active::before {
+        background-color: a.$accent-color--light;
+      }
+    }
+  }
+
+  .social_wrapper {
+    position: static;
+    transform: none;
+  }
+
+  .hamburger_wrapper {
+    display: none;
+  }
+
+  .slick-dots {
+    right: 35px;
+
+    & li:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include a.bp-devices(l-laptop) {
+  .hero_header {
+    gap: 145px;
+  }
+
+  .header_nav_wrapper {
+    gap: 110px;
   }
 }

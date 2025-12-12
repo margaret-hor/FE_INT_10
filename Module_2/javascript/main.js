@@ -23,11 +23,11 @@ document.querySelector('#scroll-btn').addEventListener('click', function() {
 
 // toggle hero menu
 function toggleModal() {
-  const navbar = document.getElementById("top_nav");
+  const navbar = document.querySelector(".header_nav_wrapper");
   const hamburgerWrapper = document.getElementById("hamburger_wrapper");
   const hamburger = document.getElementById("hamburger");
 
-  navbar && navbar.classList.toggle("nav_active");
-  hamburgerWrapper && hamburgerWrapper.classList.toggle("hamburger_wrapper_active");
-  hamburger && hamburger.classList.toggle("hamburger_active");
+  navbar && navbar.classList.toggle("nav--active");
+  hamburgerWrapper && hamburgerWrapper.classList.toggle("hamburger_wrapper--active");
+  hamburger && hamburger.classList.toggle("hamburger--active");
 }

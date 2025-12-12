@@ -5,6 +5,10 @@ body {
   color: a.$text-color;
   font-family: a.$font-stack;
   scroll-behavior: smooth;
+
+  &:has(.nav--active) {
+    overflow: hidden;
+  }
 }
 
 .container {
