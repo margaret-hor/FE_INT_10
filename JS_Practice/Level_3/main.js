@@ -23,7 +23,7 @@ const usersContainer = document.querySelector('#users-container');
 
 function displayUsers(searchTerm) {
   const filteredUsers = users.filter(user =>
-    user.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    user.name.toLowerCase().startsWith(searchTerm.toLowerCase()));
 
   const allCards = document.querySelectorAll('.user-card');
 
