@@ -1,86 +1,90 @@
 @use "../abstracts/index" as a;
 
 .projects {
-  margin-bottom: 100px;
-  padding-bottom: 40px;
-}
-
-.project_card {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  margin-bottom: 70px;
+  padding-bottom: 20px;
 }
 
 .project_card_media {
-  position: relative;
-
-  &>img {
-    width: 560px;
-    height: 400px;
-  }
+  margin-bottom: 50px;
+  box-shadow: -180px 0px 0px 15px a.$accent-bgc1;
 }
 
-.project_card_media--left::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -57px;
-  left: -35%;
-  width: 90%;
-  max-width: 510px;
-  height: 400px;
-  background-color: a.$accent-bgc1;
-  z-index: -1;
-}
-
-.project_card_media--right::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -57px;
-  left: 35%;
-  width: 90%;
-  max-width: 510px;
-  height: 400px;
-  background-color: a.$accent-bgc2;
-  z-index: -1;
+.project_card_media--inverse {
+  box-shadow: 180px 0px 0px 15px a.$accent-bgc2;
 }
 
 .project_card_content {
   width: 100%;
-  max-width: 470px;
 }
 
-.project_card_desc {
-  margin-bottom: 40px;
+.project_card_text {
+  margin-bottom: 30px;
+
+  & .section_title {
+    margin-bottom: 25px;
+  }
 }
 
 .loc_wrapper {
   display: flex;
   gap: 10px;
   align-items: center;
-  margin-bottom: 25px;
 }
 
 .loc_icon_fill {
   fill: a.$text-color;
 }
 
+@include a.bp-devices(tablet) {
+  .project_card_desc {
+    margin-bottom: 40px;
+  }
+}
+
+@include a.bp-devices(s-laptop) {
+  .projects {
+    margin-bottom: 100px;
+    padding-bottom: 40px;
+  }
+
+  .project_card {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+
+    &:has(.project_card_media--inverse) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .project_card_media {
+    margin-bottom: 0;
+    box-shadow: -240px -65px 0px 0px a.$accent-bgc1;
+
+    &>img {
+      min-width: 500px;
+    }
+  }
+
+  .project_card_media--inverse {
+    box-shadow: 240px -65px 0px 0px a.$accent-bgc2;
+  }
+
+  .project_card_content {
+    max-width: 470px;
+  }
+}
+
 @include a.bp-devices(l-laptop) {
-  .project_card_media>img {
-    width: 630px;
-    height: 470px;
+  .project_card {
+    gap: 70px;
   }
 
-  .project_card_media--left::before {
-    top: -57px;
-    max-width: 585px;
-    height: 470px;
-  }
+  .project_card_media {
 
-  .project_card_media--right::after {
-    top: -57px;
-    max-width: 585px;
-    height: 470px;
+    &>img {
+      min-width: 630px;
+    }
   }
 }

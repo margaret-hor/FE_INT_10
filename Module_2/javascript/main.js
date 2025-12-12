@@ -16,7 +16,7 @@ document.querySelector('#scroll-btn').addEventListener('click', function() {
   const viewportHeight = window.innerHeight;
 
   window.scrollTo({
-    top: currentPosition + viewportHeight - 100,
+    top: currentPosition + viewportHeight,
     behavior: 'smooth'
   });
 });

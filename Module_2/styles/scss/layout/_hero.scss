@@ -4,7 +4,7 @@
   background-image: url(../../../assets/images/hero_img.webp);
   min-height: 100vh;
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 55px;
 
   &::after {
     content: '';
@@ -180,6 +180,10 @@
 }
 
 @include a.bp-devices(s-laptop) {
+  .hero {
+    margin-bottom: 100px;
+  }
+
   .header_logo {
     max-width: 210px;
   }
