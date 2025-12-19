@@ -1,7 +1,7 @@
 @use "../abstracts/index" as a;
 
 .hero {
-  background-image: url('../../../assets/images/hero_img.webp');
+  background-image: url('../../../assets/images/hero/hero_img.webp');
   min-height: 100vh;
   position: relative;
   margin-bottom: 55px;
@@ -129,33 +129,10 @@
   font-family: a.$font-title;
   text-transform: uppercase;
   color: a.$accent-color--light;
-}
 
-.slick-dots {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-
-  & li:not(:last-child) {
+  & .slick-dots li:not(:last-child) {
     margin-bottom: 15px;
   }
-
-  & button {
-    font-size: 0;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: transparent;
-    border: 1px solid a.$accent-color--light;
-    border-radius: 50%;
-    transition: all .3s ease;
-  }
-}
-
-.slick-active button,
-.slick-dots button:hover {
-  background-color: a.$accent-color--light;
 }
 
 .hero_scroll_wrapper {
@@ -168,6 +145,12 @@
 @include a.bp-devices(tablet) {
   .header_logo {
     max-width: 240px;
+  }
+
+  .hero_text .slick-dots {
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -234,8 +217,8 @@
     display: none;
   }
 
-  .slick-dots {
-    right: 35px;
+  .hero_text .slick-dots {
+    right: 30px;
 
     & li:not(:last-child) {
       margin-bottom: 40px;
@@ -250,5 +233,9 @@
 
   .header_nav_wrapper {
     gap: 110px;
+  }
+
+  .hero_text .slick-dots {
+    right: 50px;
   }
 }

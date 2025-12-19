@@ -4,9 +4,10 @@
 @use "./base/typography";
 @use "./components/buttons";
 @use "./components/forms";
+@use "./components/slick-slider";
 @use "./layout/hero";
-@use "./layout/navbar";
 @use "./layout/footer";
 @use "./modules/projects";
 @use "./modules/news";
 @use "./modules/gallery";
+@use "./modules/map";

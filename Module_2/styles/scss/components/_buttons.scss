@@ -4,6 +4,7 @@
 .section-btn {
   text-transform: uppercase;
   color: a.$accent-color--dark;
+  font-size: 14px;
   background-color: transparent;
   border: 1px solid a.$text-color;
   transition: all .3s ease;
@@ -66,6 +67,13 @@
   display: block;
   padding: 16px 41px 17px;
   margin: 0 auto 40px;
+}
+
+//gallery
+.gallery__btn {
+  display: block;
+  padding: 17px 57px;
+  margin: 0 auto;
 }
 
 @include a.bp-devices(tablet) {
