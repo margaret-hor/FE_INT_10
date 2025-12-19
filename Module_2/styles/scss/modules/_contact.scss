@@ -1,0 +1,46 @@
+@use "../abstracts/index" as a;
+
+.contact {
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto; //position
+}
+
+.contact_form {
+  max-width: 650px;
+  margin: 60px auto 68px;
+  background-color: a.$bgc;
+
+  &__input {
+    input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid a.$input-subtle;
+      padding-bottom: 14px;
+      width: 100%;
+      font-family: a.$font-title;
+      font-size: 18px;
+
+      &::placeholder {
+        color: a.$input-subtle;
+      }
+
+      &:focus {
+        border: none;
+        border-bottom: 1px solid a.$text-color;
+      }
+    }
+  }
+
+  &__list {
+    color: a.$accent-color--dark;
+    font-size: 18px;
+    line-height: 27px;
+
+    & li {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

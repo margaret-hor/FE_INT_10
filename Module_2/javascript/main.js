@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //leaflet map
 let map = L.map('map').setView([40.695947, -73.939350], 17);
 L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-  maxZoom: 20,
+  maxZoom: 19,
   attribution: ''
 }).addTo(map);
 

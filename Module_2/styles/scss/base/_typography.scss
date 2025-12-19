@@ -109,6 +109,11 @@
   color: a.$accent-bgc1;
 }
 
+//contact
+.contact__wrapper .section_title--main {
+  margin-bottom: 50px;
+}
+
 @include a.bp-devices(m-mobile) {
   .hero_title {
     font-size: 26px;

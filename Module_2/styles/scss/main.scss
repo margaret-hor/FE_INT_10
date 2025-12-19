@@ -3,7 +3,6 @@
 @use "./base/reset";
 @use "./base/typography";
 @use "./components/buttons";
-@use "./components/forms";
 @use "./components/slick-slider";
 @use "./layout/hero";
 @use "./layout/footer";
@@ -11,3 +10,4 @@
 @use "./modules/news";
 @use "./modules/gallery";
 @use "./modules/map";
+@use "./modules/contact";

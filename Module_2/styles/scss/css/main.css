@@ -199,6 +199,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #55B7FF;
 }
 
+.contact__wrapper .section_title--main {
+  margin-bottom: 50px;
+}
+
 @media screen and (min-width: 330px) {
   .hero_title {
     font-size: 26px;
@@ -334,6 +338,11 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   padding: 17px 57px;
   margin: 0 auto;
+}
+
+.contact__btn {
+  padding: 20px 35px;
+  font-size: 18px;
 }
 
 @media screen and (min-width: 768px) {
@@ -855,4 +864,40 @@ h1, h2, h3, h4, h5, h6 {
 #map {
   height: 65vh;
   width: 100%;
+}
+
+.contact {
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.contact_form {
+  max-width: 650px;
+  margin: 60px auto 68px;
+  background-color: #fff;
+}
+.contact_form__input input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #4B5562;
+  padding-bottom: 14px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+.contact_form__input input::placeholder {
+  color: #4B5562;
+}
+.contact_form__input input:focus {
+  border: none;
+  border-bottom: 1px solid #2C4058;
+}
+.contact_form__list {
+  color: #000;
+  font-size: 18px;
+  line-height: 27px;
+}
+.contact_form__list li:not(:last-child) {
+  margin-bottom: 40px;
 }
