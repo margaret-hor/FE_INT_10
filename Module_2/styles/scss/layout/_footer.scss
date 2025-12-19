@@ -1,19 +1,20 @@
 @use "../abstracts/index" as a;
 
 .footer {
-  min-height: 100vh;
-  background-image: url('../../../assets/images/footer/footer_bg_img.jpg');
-  position: relative;
+  min-height: 500px;
+  background-color: #000;
+  // background-image: url('../../../assets/images/footer/footer_bg_img.jpg');
+  // position: relative;
 
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: a.$accent-bgc1;
-    background: linear-gradient(45deg, a.$accent-bgc1 0%, a.$accent-bgc2 100%);
-  }
+  // &::before {
+  //   content: '';
+  //   display: block;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: a.$accent-bgc1;
+  //   background: linear-gradient(45deg, a.$accent-bgc1 0%, a.$accent-bgc2 100%);
+  // }
 }

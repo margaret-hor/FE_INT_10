@@ -1,17 +1,25 @@
 @use "../abstracts/index" as a;
 
 .contact {
-  width: 100%;
-  max-width: 770px;
-  margin: 0 auto; //position
+  position: relative;
+  z-index: 3;
 }
 
 .contact_form {
-  max-width: 650px;
-  margin: 60px auto 68px;
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
+  padding: 60px 25px 68px;
   background-color: a.$bgc;
+  background-image: url('../../../assets/images/contact/form_bg.svg');
+  background-position: center bottom;
+  background-size: 100% auto;
 
   &__input {
+    &:not(:last-child) {
+      margin-bottom: 33px;
+    }
+
     input {
       background-color: transparent;
       border: none;
@@ -36,11 +44,35 @@
     color: a.$accent-color--dark;
     font-size: 18px;
     line-height: 27px;
+    margin-bottom: 40px;
 
     & li {
       &:not(:last-child) {
         margin-bottom: 40px;
       }
     }
+  }
+}
+
+@include a.bp-devices(tablet) {
+  .contact_form {
+    padding: 60px 0 68px;
+
+    &__row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      column-gap: 55px;
+    }
+
+    &__list {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@include a.bp-devices(s-laptop) {
+  .contact {
+    margin-top: -310px;
   }
 }

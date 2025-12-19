@@ -9,7 +9,8 @@
   border: 1px solid a.$text-color;
   transition: all .3s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: a.$accent-color--dark;
     color: a.$bgc;
     border: 1px solid transparent;

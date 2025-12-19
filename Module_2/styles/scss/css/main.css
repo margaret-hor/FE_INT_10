@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #55B7FF;
 }
 
-.contact__wrapper .section_title--main {
+.contact_form .section_title--main {
   margin-bottom: 50px;
 }
 
@@ -285,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #2C4058;
   transition: all 0.3s ease;
 }
-.section-btn:hover {
+.section-btn:hover, .section-btn:focus {
   background-color: #000;
   color: #fff;
   border: 1px solid transparent;
@@ -632,20 +632,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .footer {
-  min-height: 100vh;
-  background-image: url("../../../assets/images/footer/footer_bg_img.jpg");
-  position: relative;
-}
-.footer::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #55B7FF;
-  background: linear-gradient(45deg, #55B7FF 0%, #7E5AFF 100%);
+  min-height: 500px;
+  background-color: #000;
 }
 
 .projects {
@@ -864,18 +852,27 @@ h1, h2, h3, h4, h5, h6 {
 #map {
   height: 65vh;
   width: 100%;
+  position: relative;
+  z-index: 0;
 }
 
 .contact {
-  width: 100%;
-  max-width: 770px;
-  margin: 0 auto;
+  position: relative;
+  z-index: 3;
 }
 
 .contact_form {
-  max-width: 650px;
-  margin: 60px auto 68px;
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
+  padding: 60px 25px 68px;
   background-color: #fff;
+  background-image: url("../../../assets/images/contact/form_bg.svg");
+  background-position: center bottom;
+  background-size: 100% auto;
+}
+.contact_form__input:not(:last-child) {
+  margin-bottom: 33px;
 }
 .contact_form__input input {
   background-color: transparent;
@@ -897,7 +894,28 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   font-size: 18px;
   line-height: 27px;
+  margin-bottom: 40px;
 }
 .contact_form__list li:not(:last-child) {
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact_form {
+    padding: 60px 0 68px;
+  }
+  .contact_form__row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 55px;
+  }
+  .contact_form__list {
+    margin-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact {
+    margin-top: -310px;
+  }
 }
