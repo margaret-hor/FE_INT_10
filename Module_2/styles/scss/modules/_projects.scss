@@ -88,3 +88,28 @@
     }
   }
 }
+
+@include a.bp-devices(monitor4k) {
+  .project_card_media {
+
+    &>img {
+      min-width: 955px;
+    }
+  }
+
+  .project_card_content {
+    max-width: 900px;
+  }
+
+  .project_card_text {
+    margin-bottom: 70px;
+
+    & .section_title {
+      margin-bottom: 35px;
+    }
+  }
+
+  .loc_wrapper i {
+    font-size: 32px;
+  }
+}

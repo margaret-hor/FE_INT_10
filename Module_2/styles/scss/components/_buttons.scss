@@ -88,3 +88,31 @@
     margin: 0 0 60px;
   }
 }
+
+@include a.bp-devices(monitor4k) {
+  .section-btn {
+    font-size: 32px;
+  }
+
+  .social-btn,
+  .hero_scroll_wrapper button {
+    width: 90px;
+    height: 90px;
+
+    &>i {
+      font-size: 28px;
+    }
+  }
+
+  .project_card_btn {
+    padding: 25px 50px 25px;
+  }
+
+  .gallery__btn {
+    padding: 25px 70px;
+  }
+
+  .contact__btn {
+    padding: 32px 65px;
+  }
+}

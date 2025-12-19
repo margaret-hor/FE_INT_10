@@ -1,4 +1,6 @@
+//==========================
 // hero carousel
+//==========================
 $(document).ready(function () {
   $('.hero_text').slick({
     vertical: true,
@@ -16,7 +18,10 @@ $(document).ready(function () {
       }
     ]
   });
+
+  //==========================
   // news carousel
+  //==========================
   $('.news_carousel__slick').slick({
     dots: true,
     autoplay: true,
@@ -31,7 +36,15 @@ $(document).ready(function () {
     centerPadding: '10px',
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 2600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          centerPadding: '30px'
+        }
+      },
+      {
+        breakpoint: 1550,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -59,7 +72,9 @@ $(document).ready(function () {
   });
 });
 
+//==========================
 // hero scroll down
+//==========================
 document.querySelector('#scroll-btn').addEventListener('click', function () {
   const currentPosition = window.pageYOffset;
   const viewportHeight = window.innerHeight;
@@ -70,7 +85,9 @@ document.querySelector('#scroll-btn').addEventListener('click', function () {
   });
 });
 
+//==========================
 // toggle hero menu
+//==========================
 function toggleModal() {
   const navbar = document.querySelector(".header_nav_wrapper");
   const hamburgerWrapper = document.getElementById("hamburger_wrapper");
@@ -81,7 +98,9 @@ function toggleModal() {
   hamburger && hamburger.classList.toggle("hamburger--active");
 }
 
+//==========================
 //lightGallery
+//==========================
 document.addEventListener('DOMContentLoaded', function () {
   lightGallery(document.getElementById('lightgallery'), {
     selector: '.gallery__item',
@@ -101,7 +120,9 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+//==========================
 //leaflet map
+//==========================
 let map = L.map('map').setView([40.695947, -73.939350], 17);
 L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
   maxZoom: 19,

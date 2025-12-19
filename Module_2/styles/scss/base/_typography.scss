@@ -114,6 +114,13 @@
   margin-bottom: 50px;
 }
 
+//footer
+.footer_rights {
+  color: #fff;
+  font-family: a.$font-title;
+  font-size: 14px;
+}
+
 @include a.bp-devices(m-mobile) {
   .hero_title {
     font-size: 26px;
@@ -189,5 +196,62 @@
     font-size: 80px;
     letter-spacing: 8px; //10%
     margin-bottom: 30px;
+  }
+}
+
+@include a.bp-devices(monitor4k) {
+  .section_title {
+    font-size: 70px;
+  }
+
+  .section_title--main {
+    margin-bottom: 120px;
+  }
+
+  .section_subtitle {
+    font-size: 32px;
+  }
+
+  .nav_cta {
+    font-size: 35px;
+  }
+
+  .hero_title {
+    font-size: 160px;
+  }
+
+  .hero_subtitle {
+    font-size: 45px;
+  }
+
+  .project_desc {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .loc_txt {
+    font-size: 32px;
+  }
+
+  .news_card__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .news_card__text {
+    font-size: 24px;
+  }
+
+  .news_card__author-name {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .news_card__author-date {
+    font-size: 20px;
+  }
+
+  .footer_rights {
+    font-size: 24px;
   }
 }

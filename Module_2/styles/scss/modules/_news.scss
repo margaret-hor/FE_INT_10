@@ -80,3 +80,10 @@
     margin-right: 30px;
   }
 }
+
+@include a.bp-devices(monitor4k) {
+  .news_card__author-avatar {
+    width: 90px;
+    height: 90px;
+  }
+}

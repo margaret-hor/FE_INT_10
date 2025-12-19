@@ -63,3 +63,26 @@
     }
   }
 }
+
+@include a.bp-devices(monitor4k) {
+  .slick-dots {
+    & button {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .slick-arrow {
+    width: 70px;
+    height: 70px;
+    font-size: 18px;
+
+    &.slick-prev {
+      left: -135px;
+    }
+
+    &.slick-next {
+      right: -135px;
+    }
+  }
+}

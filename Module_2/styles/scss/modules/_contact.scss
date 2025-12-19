@@ -14,6 +14,7 @@
   background-image: url('../../../assets/images/contact/form_bg.svg');
   background-position: center bottom;
   background-size: 100% auto;
+  margin-bottom: 55px;
 
   &__input {
     &:not(:last-child) {
@@ -50,6 +51,10 @@
       &:not(:last-child) {
         margin-bottom: 40px;
       }
+
+      & i {
+        color: a.$accent-bgc2;
+      }
     }
   }
 }
@@ -74,5 +79,30 @@
 @include a.bp-devices(s-laptop) {
   .contact {
     margin-top: -310px;
+  }
+}
+
+@include a.bp-devices(monitor4k) {
+  .contact_form {
+    max-width: 1500px;
+    padding: 100px 0 110px;
+
+    &__row {
+      gap: 110px;
+    }
+
+    &__list {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    &__input input {
+      font-size: 32px;
+      padding-bottom: 25px;
+    }
+
+    &__input:not(:last-child) {
+      margin-bottom: 60px;
+    }
   }
 }

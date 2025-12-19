@@ -30,6 +30,12 @@ body {
   object-position: center;
 }
 
+.social_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .separator::before {
   content: '';
   display: block;
@@ -45,5 +51,20 @@ body {
 @include a.bp-devices(l-laptop) {
   .container {
     max-width: 1170px;
+  }
+}
+
+@include a.bp-devices(monitor4k) {
+  .container {
+    max-width: 2000px;
+  }
+
+  .social_wrapper {
+    gap: 45px;
+  }
+
+  .separator::before {
+    content: '';
+    width: 150px;
   }
 }
