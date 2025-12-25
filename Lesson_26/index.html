@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <div class="page_wrapper">
+    <section class="tracks">
+      <div class="container">
+        <h2 class="section_title">tracks playlist</h2>
+        <ul class="track_list" id="track_list">
+
+        </ul>
+      </div>
+    </section>
+    <section class="modal">
+      <div class="container">
+        <h2 class="section_title">modal window</h2>
+        <button class="modal_btn" id="open_modal_btn">open</button>
+        <div class="modal_overlay" id="modal_overlay">
+          <div class="modal_header">
+            <h3 class="section_title">heading</h3>
+            <button class="modal_btn" id="close_modal_btn">close</button>
+          </div>
+          <div class="modal_body">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab totam ea beatae dolore autem. Voluptatem
+              vitae doloremque eveniet sequi, accusamus ex ducimus cum facilis eum, asperiores possimus sed voluptas
+              cupiditate.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab totam ea beatae dolore autem. Voluptatem
+              vitae doloremque eveniet sequi, accusamus ex ducimus cum facilis eum, asperiores possimus sed voluptas
+              cupiditate.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab totam ea beatae dolore autem. Voluptatem
+              vitae doloremque eveniet sequi, accusamus ex ducimus cum facilis eum, asperiores possimus sed voluptas
+              cupiditate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="streetlights">
+      <h2 class="section_title">streetlights</h2>
+      <div class="streetlight">
+        <div class="lights">
+          <div class="light red active" id="red_light"></div>
+          <div class="light yellow" id="yellow_light"></div>
+          <div class="light green" id="green_light"></div>
+        </div>
+      </div>
+      <button class="streetlights_btn" id="switch_light_btn">switch lights</button>
+    </section>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

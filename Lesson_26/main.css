@@ -1,0 +1,185 @@
+/* common */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.section_title,
+.track_author {
+  text-transform: uppercase;
+  color: #ff7a8a;
+  text-align: center;
+  font-weight: bold;
+}
+
+.section_title::after {
+  content: '';
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid #ff7a8a;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* playlist */
+.track_list {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(30, 30, 46, 0.8);
+  border: 1px solid #2d3047;
+  border-radius: 12px;
+}
+
+.track_list li {
+  padding: 15px;
+  width: 100%;
+  max-width: 420px;
+  background-color: rgba(41, 41, 62, 0.7);
+  border-left: 4px solid #e94560;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.track_list li:hover {
+  transform: translateX(5px);
+  background: rgba(52, 52, 82, 0.9);
+}
+
+.track_list li span {
+  display: block;
+}
+
+.track_author {
+  margin-bottom: 15px;
+}
+
+
+/* modal window */
+.modal {
+  position: relative;
+}
+
+.modal:has(.modal_active) {
+  height: 80vh;
+}
+
+.modal_btn,
+.streetlights_btn {
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #ff7a8a;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px;
+  background-color: rgba(41, 41, 62, 0.7);
+  border: 1px solid #2d3047;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.modal_btn:hover,
+.streetlights_btn:hover {
+  background: rgba(52, 52, 82, 0.9);
+}
+
+.modal_overlay {
+  display: none;
+  position: absolute;
+  right: 15px;
+  left: 15px;
+  top: 15px;
+  bottom: 15px;
+  background-color: rgba(30, 30, 46);
+  border: 1px solid #2d3047;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.modal_active {
+  display: block;
+}
+
+.modal_header .modal_btn {
+  position: absolute;
+  font-size: 20px;
+  right: 20px;
+  top: 20px;
+}
+
+.modal_body {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.modal_body p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* streetlights */
+.streetlight {
+  background-color: rgba(30, 30, 46, 0.8);
+  border: 1px solid #2d3047;
+  border-radius: 12px;
+  max-width: 200px;
+  padding: 20px;
+  margin: 0 auto 50px;
+}
+
+.lights {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.light {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(41, 41, 62, 0.7);
+}
+
+.light:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.red.active {
+  background-color: red;
+  box-shadow: 0 0 15px red;
+}
+
+.yellow.active {
+  background-color: yellow;
+  box-shadow: 0 0 15px yellow;
+}
+.green.active {
+  background-color: green;
+  box-shadow: 0 0 15px green;
+}
+
+.streetlights_btn {
+  display: block;
+  margin: 0 auto;
+}
